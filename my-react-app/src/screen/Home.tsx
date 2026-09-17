@@ -14,7 +14,6 @@ import Facebook from "../assets/Facebook.png";
 const Home = () => {
   return (
     <div className="min-h-screen w-full bg-[#1A0B2E] font-Helvetica text-white">
-      {/* NAV */}
       <nav className="border-b border-cyan-500/30">
         <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-6">
           <img src={MyLogo} alt="Logo" className="h-6 w-6" />
@@ -34,11 +33,9 @@ const Home = () => {
       </nav>
 
       <main className="mx-auto max-w-5xl px-6">
-        {/* HERO */}
         <section className="relative mt-30">
-          <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-start sm:justify-between">
-            {/* Avatar with glow */}
-            <div className="relative flex h-64 w-64 shrink-0 items-center justify-center">
+          <div className="flex flex-col items-start sm:flex-row sm:items-start sm:justify-start">
+            <div className="relative flex h-64 w-50 shrink-0 items-center justify-center">
               <img
                 src={Ellipse}
                 alt=""
@@ -55,21 +52,19 @@ const Home = () => {
                 className="relative z-10 h-40 w-40 object-contain"
               />
             </div>
-
-            {/* Intro copy */}
-            <div className="relative flex-1 text-center sm:text-left">
-              <p className="relative mb-3  text-xs">
-                <img
-                  src={Arrow}
-                  alt=""
-                  className="absolute -left-25 -top-15 h-47.82px w-78.34px "
-                />
+            <div className="relative flex-3 text-left sm:text-start">
+              <img
+                src={Arrow}
+                alt=""
+                className="absolute -left-25 -top-5 h-25 w-20px "
+              />
+              <p className="relative mb-15 mr-10  text-xs">
                 Hello! I Am <span className="text-purple-500">Abdullah</span>
               </p>
 
               <p className="text-xs">A Designer who</p>
 
-              <h1 className="mt-1 text-3xl leading-9 sm:text-4xl">
+              <h1 className="mt-1 text-3xl leading-10 sm:text-4xl">
                 Judges a book
                 <br />
                 by its
@@ -77,9 +72,9 @@ const Home = () => {
                   <img
                     src={Ovel}
                     alt=""
-                    className="absolute inset-0 z-0 h-full w-full "
-                  />
-                  <span className="relative z-10">cover</span>
+                    className="absolute left-1 h-10 w-40 "
+                  />{" "}
+                  <span className="relative z-10 text-4xl"> cover</span>
                 </span>
                 ...
               </h1>
@@ -110,8 +105,6 @@ const Home = () => {
             </p>
           </div>
         </section>
-
-        {/* WORK EXPERIENCE */}
         <section className="mt-20">
           <h2 className="mb-8 text-2xl font-bold">Work Experience</h2>
 
@@ -193,8 +186,6 @@ const Home = () => {
             </div>
           </div>
         </section>
-
-        {/* LOOKING FOR A TEAM */}
         <section className="relative mt-32 flex flex-col items-center overflow-hidden pb-10 text-center">
           <img src={Main} alt="Main" />
         </section>
