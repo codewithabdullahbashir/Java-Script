@@ -111,10 +111,18 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="mt-20">
-          <h2 className="mb-8 text-2xl font-bold">Work Experience</h2>
+        <section className="relative mt-20">
+          <h2 className="relative z-10 mb-8 text-2xl font-bold">
+            Work Experience
+          </h2>
 
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          <img
+            src={Gradient}
+            alt=""
+            className="pointer-events-none absolute left-1/2 top-1/2 z-0 w-162.5 -translate-x-1/2 -translate-y-1/2 opacity-80"
+          />
+
+          <div className="relative z-10 grid grid-cols-1 gap-2 md:grid-cols-2">
             <Cards
               alt="Card1"
               imageLink={Card1}
@@ -157,92 +165,45 @@ const Home = () => {
           <img src={Main} alt="Main" className="h-auto max-w-full" />
         </section>
 
-        <section className="relative mt-10">
-          <div className="pointer-events-none absolute -right-10 top-1/2 h-72 w-96 -translate-y-1/2 rounded-full bg-purple-700/20 blur-[100px]" />
+        <section className="relative mx-auto mt-10 w-full max-w-184">
+          <div className="pointer-events-none absolute -right-8 top-1/2 h-72 w-96 -translate-y-1/2 rounded-full bg-purple-700/20 blur-[100px]" />
 
-          <div className="relative grid grid-cols-1 items-center gap-0 md:grid-cols-12">
-            <div className="z-20 md:col-span-7">
-              <p className="mb-2 text-xs font-bold text-purple-400">
+          <div className="relative min-h-53.5">
+            <div className="relative z-20 pt-4 md:pt-4">
+              <p className="mb-1 text-xs font-bold text-purple-400">
                 Featured Project
               </p>
-              <h2 className="mb-6 text-3xl font-bold text-white">
+
+              <h2 className="mb-5 text-[22px] font-bold leading-tight text-[#c9c9ee]">
                 Example Project
               </h2>
 
-              <div className="rounded-2xl  bg-linear-to-r from-[#41346e]/98 via-[#41346e]/90 to-[#e8ddf1]/85 p-6 backdrop-blur-lg shadow-2xl md:-mr-10">
-                <p className="text-[18px] leading-relaxed text-white">
+              <div className="relative z-30 w-full max-w-105 rounded-xl bg-linear-to-r from-[#24183d]/95 via-[#4a3b70]/95 to-[#e7dff0]/90 p-5 shadow-2xl backdrop-blur-lg md:h-26.25">
+                <p className="text-[12px] leading-[1.45] text-[#CCD6F6] md:text-[12px]">
                   A web app for visualizing personalized Spotify data. View your
-                  <br />
                   top artists, top tracks, recently played tracks, and detailed
-                  audio <br />
-                  information about each track. Create and save new playlists{" "}
-                  <br />
-                  of recommended tracks based on your existing playlists and
-                  more.
+                  audio information about each track. Create and save new
+                  playlists of recommended tracks based on your existing
+                  playlists and more.
                 </p>
               </div>
 
               <div className="mt-5 flex gap-3 text-xl text-white">
-                <div className="mt-5 flex gap-2 text-xl text-white">
-                  <span aria-hidden>❋</span>
-                  <span aria-hidden>❋</span>
-                </div>
+                <span aria-hidden>❋</span>
+                <span aria-hidden>❋</span>
               </div>
             </div>
-            <div className="relative mt-8 md:col-span-5 md:mt-0">
-              <div className="relative -left-1 bg-linear-to-br h-full w-full rounded-2xl bg-[#311158] p-2">
-                <img
-                  src={S1}
-                  alt="Example Project preview"
-                  className="relative w-full rounded-xl border object-cover border-[#693B93]/40 shadow-2xl"
-                />
-              </div>
+
+            <div className="absolute right-0 top-0 z-10 hidden h-53.5 w-91.5 rounded-md bg-[#310235] p-0 md:block ">
+              <img
+                src={S1}
+                alt="Example Project preview"
+                className="absolute right-0 top-4.5 h-49 w-84.5  object-cover"
+              />
             </div>
           </div>
         </section>
-        <section className="relative mt-10">
-          <div className="pointer-events-none absolute -right-10 top-1/2 h-72 w-96 -translate-y-1/2 rounded-full bg-purple-700/20 blur-[100px]" />
 
-          <div className="relative grid grid-cols-1 items-center gap-0 md:grid-cols-12">
-            <div className="relative mt-8 md:col-span-5 md:mt-0">
-              <div className="relative -left-1 bg-linear-to-br h-full w-full rounded-2xl bg-[#311158] p-2">
-                <img
-                  src={S1}
-                  alt="Example Project preview"
-                  className="relative w-full rounded-xl border object-cover border-[#693B93]/40 shadow-2xl"
-                />
-              </div>
-            </div>
-            <div className="z-20 md:col-span-7">
-              <p className="mb-2 text-xs font-bold text-purple-400">
-                Featured Project
-              </p>
-              <h2 className="mb-6 text-3xl font-bold text-white">
-                Example Project
-              </h2>
-
-              <div className="rounded-2xl  bg-linear-to-r from-[#41346e]/98 via-[#41346e]/90 to-[#e8ddf1]/85 p-6 backdrop-blur-lg shadow-2xl md:-mr-10">
-                <p className="text-[18px] leading-relaxed text-white">
-                  A web app for visualizing personalized Spotify data. View your
-                  <br />
-                  top artists, top tracks, recently played tracks, and detailed
-                  audio <br />
-                  information about each track. Create and save new playlists{" "}
-                  <br />
-                  of recommended tracks based on your existing playlists and
-                  more.
-                </p>
-              </div>
-
-              <div className="mt-5 flex gap-3 text-xl text-white">
-                <div className="mt-5 flex gap-2 text-xl text-white">
-                  <span aria-hidden>❋</span>
-                  <span aria-hidden>❋</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
         <section className="mt-32 pb-24">
           <h1 className="text-2xl font-bold">Contact</h1>
 
