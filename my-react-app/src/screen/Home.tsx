@@ -33,7 +33,7 @@ const Home = () => {
       </nav>
 
       <main className="mx-auto max-w-5xl px-6">
-        <section className="relative mt-30">
+        <section className="relative mt-20">
           <div className="flex flex-col items-start sm:flex-row sm:items-start sm:justify-start">
             <div className="relative flex h-64 w-50 shrink-0 items-center justify-center">
               <img
@@ -56,7 +56,7 @@ const Home = () => {
               <img
                 src={Arrow}
                 alt=""
-                className="absolute -left-25 -top-5 h-25 w-20px "
+                className="absolute -left-22 -top-5 h-25 w-20px "
               />
               <p className="relative mb-15 mr-10  text-xs">
                 Hello! I Am <span className="text-purple-500">Abdullah</span>
@@ -72,14 +72,14 @@ const Home = () => {
                   <img
                     src={Ovel}
                     alt=""
-                    className="absolute left-1 h-10 w-40 "
+                    className="absolute left-1 - bottom-0 h-11 w-50 "
                   />{" "}
                   <span className="relative z-10 text-4xl"> cover</span>
                 </span>
                 ...
               </h1>
 
-              <p className="mt-2 text-[11px] text-gray-400">
+              <p className="mt-2 text-[11px] text-[#FFFFFF]">
                 Because if the cover does not impress you what else can?
               </p>
             </div>
