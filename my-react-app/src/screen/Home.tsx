@@ -59,7 +59,7 @@ const Home = () => {
               <img
                 src={Arrow}
                 alt=""
-                className="absolute -top-6 left-1/2 -translate-x-1/2 sm:-left-10 sm:translate-x-0 h-16 w-auto"
+                className="absolute -top-10 left-1/2 -translate-x-1/2 sm:-left-35 sm:translate-x-0 h-40 w-auto"
               />
               <p className="relative mb-2 text-xs sm:mb-4">
                 Hello! I Am <span className="text-purple-500">Abdullah</span>
@@ -72,12 +72,12 @@ const Home = () => {
                 <br />
                 by its{" "}
                 <span className="relative inline-block px-1 text-purple-500">
+                  <span>cover</span>
                   <img
                     src={Ovel}
                     alt=""
-                    className="absolute inset-0 -z-10 h-full w-full object-fill"
+                    className="absolute inset-0  h-full w-full "
                   />
-                  <span>cover</span>
                 </span>
                 ...
               </h1>
@@ -90,7 +90,7 @@ const Home = () => {
 
           <div className="mt-16">
             <h2 className="text-2xl font-medium sm:text-3xl">
-              I'm a Software Engineer.
+              I'm a Software Engineer.|
             </h2>
 
             <p className="mt-2 flex items-center justify-center text-sm sm:justify-start">
@@ -111,7 +111,7 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="relative mt-20">
+        <section className="relative mt-20 max-w-195 ">
           <h2 className="relative z-10 mb-8 text-2xl font-bold">
             Work Experience
           </h2>
@@ -161,8 +161,8 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="relative mt-20 flex flex-col items-center overflow-hidden pb-10 text-center">
-          <img src={Main} alt="Main" className="h-auto max-w-full" />
+        <section className="relative mt-30 flex flex-col items-center overflow-hidden pb-10 text-center">
+          <img src={Main} alt="Main" className="h-auto max-w-145" />
         </section>
 
         <section className="relative mx-auto mt-10 w-full max-w-184">
@@ -179,7 +179,7 @@ const Home = () => {
               </h2>
 
               <div className="relative z-30 w-full max-w-105 rounded-xl bg-linear-to-r from-[#24183d]/95 via-[#4a3b70]/95 to-[#e7dff0]/90 p-5 shadow-2xl backdrop-blur-lg md:h-26.25">
-                <p className="text-[12px] leading-[1.45] text-[#CCD6F6] md:text-[12px]">
+                <p className="text-[18px] leading-[1.45] text-[#CCD6F6] md:text-[12px]">
                   A web app for visualizing personalized Spotify data. View your
                   top artists, top tracks, recently played tracks, and detailed
                   audio information about each track. Create and save new
@@ -194,12 +194,55 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="absolute right-0 top-0 z-10 hidden h-53.5 w-91.5 rounded-md bg-[#310235] p-0 md:block ">
+            <div className="absolute right-0 top-0 z-10 hidden h-56.5 w-91.5 rounded-md bg-[#310235] p-0 md:block ">
               <img
                 src={S1}
                 alt="Example Project preview"
-                className="absolute right-0 top-4.5 h-49 w-84.5  object-cover"
+                className="absolute right-0 top-4.5 h-52 w-84.5  object-cover"
               />
+            </div>
+          </div>
+        </section>
+        <section className="relative mx-auto mt-10 w-full max-w-[770px]">
+          {/* Purple glow */}
+          <div className="pointer-events-none absolute -left-10 top-1/2 h-72 w-96 -translate-y-1/2 rounded-full bg-purple-700/20 blur-[100px]" />
+
+          <div className="relative min-h-[224px]">
+            {/* Project Image */}
+            <div className="absolute left-0 top-0 z-10 h-[224px] w-[384px] rounded-md bg-[#310235]">
+              <img
+                src={S1}
+                alt="Example Project preview"
+                className="absolute left-0 top-5 h-[204px] w-[352px] rounded-l-md object-cover"
+              />
+            </div>
+
+            {/* Project Content */}
+            <div className="relative z-20 ml-auto flex w-[440px] flex-col items-end pt-1">
+              <p className="mb-1 text-xs font-bold text-purple-400">
+                Featured Project
+              </p>
+
+              <h2 className="mb-5 text-[22px] font-bold leading-tight text-[#c9c9ee]">
+                Example Project
+              </h2>
+
+              {/* Description Card */}
+              <div className="w-full rounded-xl bg-linear-to-r from-[#4a3b70]/95 via-[#24183d]/95 to-[#120d26]/95 p-5 shadow-2xl backdrop-blur-lg">
+                <p className="text-[12px] leading-[1.45] text-[#CCD6F6]">
+                  A web app for visualizing personalized Spotify data. View your
+                  top artists, top tracks, recently played tracks, and detailed
+                  audio information about each track. Create and save new
+                  playlists of recommended tracks based on your existing
+                  playlists and more.
+                </p>
+              </div>
+
+              {/* Icons */}
+              <div className="mt-5 flex gap-3 text-xl text-white">
+                <span aria-hidden>❋</span>
+                <span aria-hidden>❋</span>
+              </div>
             </div>
           </div>
         </section>
