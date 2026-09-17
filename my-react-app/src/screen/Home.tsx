@@ -1,7 +1,7 @@
 import MyLogo from "../assets/MyLogo.png";
 import My from "../assets/My.png";
-import Card4 from "../assets/Card4.png";
 import Card1 from "../assets/Card1.png";
+import Card4 from "../assets/Card4.png";
 import Card2 from "../assets/Card2.png";
 import Card3 from "../assets/Card3.png";
 import Ellipse from "../assets/Ellipse.png";
@@ -10,13 +10,14 @@ import Gradient from "../assets/Gradient.png";
 import Arrow from "../assets/Arrow.png";
 import Ovel from "../assets/Ovel.png";
 import Facebook from "../assets/Facebook.png";
+import Cards from "../components/Cards";
 
 const Home = () => {
   return (
-    <div className="min-h-screen w-full bg-[#1A0B2E] font-Helvetica text-white">
-      <nav className="border-b border-cyan-500/30">
-        <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-6">
-          <img src={MyLogo} alt="Logo" className="h-6 w-6" />
+    <div className="min-h-screen w-full bg-[#0b0218] font-Helvetica text-white">
+      <nav className="bg-[#1A0B2E]">
+        <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
+          <img src={MyLogo} alt="Logo" className="h-6 w-6 " />
 
           <div className="flex gap-24 text-xs">
             <a href="#" className="font-bold hover:text-purple-400">
@@ -39,7 +40,7 @@ const Home = () => {
               <img
                 src={Ellipse}
                 alt=""
-                className="absolute inset-0 h-full w-full object-contain inline"
+                className="absolute inset-0 h-400px w-400px object-contain inline"
               />
               <img
                 src={Gradient}
@@ -47,9 +48,14 @@ const Home = () => {
                 className="absolute inset-0 h-full w-full object-contain"
               />
               <img
+                src={Gradient}
+                alt=""
+                className="absolute inset-0 h-80 w-100% object-contain  "
+              />
+              <img
                 src={My}
                 alt="Portrait of Abdullah"
-                className="relative z-10 h-40 w-40 object-contain"
+                className="relative h-40 w-40 object-contain"
               />
             </div>
             <div className="relative flex-3 text-left sm:text-start">
@@ -64,7 +70,7 @@ const Home = () => {
 
               <p className="text-xs">A Designer who</p>
 
-              <h1 className="mt-1 text-3xl leading-10 sm:text-4xl">
+              <h5 className="mt-1 leading-12 sm:text-4xl">
                 Judges a book
                 <br />
                 by its
@@ -72,12 +78,12 @@ const Home = () => {
                   <img
                     src={Ovel}
                     alt=""
-                    className="absolute left-1 - bottom-0 h-11 w-50 "
+                    className="absolute left-1 - bottom-1 h-11 "
                   />{" "}
-                  <span className="relative z-10 text-4xl"> cover</span>
+                  <span className="relative  sm:text-4xl"> cover</span>
                 </span>
                 ...
-              </h1>
+              </h5>
 
               <p className="mt-2 text-[11px] text-[#FFFFFF]">
                 Because if the cover does not impress you what else can?
@@ -108,82 +114,41 @@ const Home = () => {
         <section className="mt-20">
           <h2 className="mb-8 text-2xl font-bold">Work Experience</h2>
 
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            <div className="flex min-h-47.5 items-center gap-6 rounded-[25px] border-t-4 border-[#4F228D] bg-[#1D0B3B] p-8">
-              <img
-                src={Card1}
-                alt="CIB Mobile"
-                className="h-20 w-20 shrink-0 object-contain"
-              />
-              <div>
-                <h4 className="text-xl font-light">CIB on the Mobile</h4>
-                <p className="mt-1 flex items-start gap-2 text-xs text-gray-400">
-                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-gray-400" />
-                  Take your client onboard seamlessly by our amazing tool of
-                  digital onboard process.
-                </p>
-                <button className="mt-5 rounded-xl border border-[#693B93] bg-[#2C1250] px-6 py-2 text-xs font-bold hover:bg-purple-600">
-                  LEARN MORE
-                </button>
-              </div>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 bg-[url(/assets/Gradient.png)] bg-cover bg-center h-screen w-full">
+            <Cards
+              alt="Card4"
+              imageLink={Card1}
+              text1="Take your client onboard seamlessly by our amazing"
+              text2="tool of digital onboard process."
+              text3="Learn More"
+              title="CIB on the Mobile"
+            />
 
-            <div className="flex min-h-47.5 items-center gap-6 rounded-[25px] border-t-4 border-[#4F228D] bg-[#1D0B3B] p-8">
-              <img
-                src={Card2}
-                alt="CIB Web"
-                className="h-20 w-20 shrink-0 object-contain"
-              />
-              <div>
-                <h4 className="text-xl font-light">CIB on the Mobile</h4>
-                <p className="mt-1 flex items-start gap-2 text-xs text-gray-400">
-                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-gray-400" />
-                  Take your client onboard seamlessly by our amazing tool of
-                  digital onboard process.
-                </p>
-                <button className="mt-5 rounded-xl border border-[#693B93] bg-[#2C1250] px-6 py-2 text-xs font-bold hover:bg-purple-600">
-                  LEARN MORE
-                </button>
-              </div>
-            </div>
+            <Cards
+              alt="Card4"
+              imageLink={Card2}
+              text1="Take your client onboard seamlessly by our amazing"
+              text2="tool of digital onboard process."
+              text3="Learn More"
+              title="CIB on the Mobile"
+            />
 
-            <div className="flex min-h-47.5 items-center gap-6 rounded-[25px] border-t-4 border-[#4F228D] bg-[#1D0B3B] p-8">
-              <img
-                src={Card3}
-                alt="Mobile Project"
-                className="h-20 w-20 shrink-0 object-contain"
-              />
-              <div>
-                <h4 className="text-xl font-light">CIB on the Mobile</h4>
-                <p className="mt-1 flex items-start gap-2 text-xs text-gray-400">
-                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-gray-400" />
-                  Take your client onboard seamlessly by our amazing tool of
-                  digital onboard process.
-                </p>
-                <button className="mt-5 rounded-xl border border-[#693B93] bg-[#2C1250] px-6 py-2 text-xs font-bold hover:bg-purple-600">
-                  LEARN MORE
-                </button>
-              </div>
-            </div>
-
-            <div className="flex min-h-47.5 items-center gap-6 rounded-[25px] border-t-4 border-[#4F228D] bg-[#1D0B3B] p-8">
-              <img
-                src={Card4}
-                alt="Web Project"
-                className="h-20 w-20 shrink-0 object-contain"
-              />
-              <div>
-                <h4 className="text-xl font-light">CIB on the Mobile</h4>
-                <p className="mt-1 flex items-start gap-2 text-xs text-gray-400">
-                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-gray-400" />
-                  Take your client onboard seamlessly by our amazing tool of
-                  digital onboard process.
-                </p>
-                <button className="mt-5 rounded-xl border border-[#693B93] bg-[#2C1250] px-6 py-2 text-xs font-bold hover:bg-purple-600">
-                  LEARN MORE
-                </button>
-              </div>
-            </div>
+            <Cards
+              alt="Card4"
+              imageLink={Card3}
+              text1="Take your client onboard seamlessly by our amazing"
+              text2="tool of digital onboard process."
+              text3="Learn More"
+              title="CIB on the Mobile"
+            />
+            <Cards
+              alt="Card4"
+              imageLink={Card4}
+              text1="Take your client onboard seamlessly by our amazing"
+              text2="tool of digital onboard process."
+              text3="Learn More"
+              title="CIB on the Mobile"
+            />
           </div>
         </section>
         <section className="relative mt-32 flex flex-col items-center overflow-hidden pb-10 text-center">
