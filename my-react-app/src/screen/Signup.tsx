@@ -97,6 +97,18 @@ const Signup = () => {
                   />
                 </div>
               </div>
+              <div className="mt-3 flex items-center gap-1">
+                <input
+                  type="checkbox"
+                  className="h-4.5 w-4.5 accent-indigo-500"
+                />
+
+                <p className="text-[14px] text-gray-600">
+                  I agree to all the{" "}
+                  <span className="text-[#FF8682]">Terms</span> and{" "}
+                  <span className="text-[#FF8682]">Privacy Policies</span>
+                </p>
+              </div>
             </form>
           </div>
         </div>
