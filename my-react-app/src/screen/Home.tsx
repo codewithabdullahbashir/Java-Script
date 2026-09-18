@@ -16,7 +16,6 @@ import S2 from "../assets/S2.png";
 import Vector3 from "../assets/Vector3.png";
 import Vector2 from "../assets/Vector 2.png";
 import Vector1 from "../assets/Vector1.png";
-import Vector4 from "../assets/Vector4.png";
 
 const Home = () => {
   return (
