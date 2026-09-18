@@ -115,6 +115,13 @@ const Signup = () => {
               >
                 Create account
               </button>
+              <div className="my-4 flex items-center gap-2">
+                <div className="h-px flex-1 bg-gray-200" />
+                <span className="text-[14px] text-gray-400">
+                  Or Sign up with
+                </span>
+                <div className="h-px flex-1 bg-gray-200" />
+              </div>
             </form>
           </div>
         </div>
