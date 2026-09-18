@@ -1,3 +1,9 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { setDoc, doc } from "firebase/firestore";
+import { auth, db } from "../config/Firebase";
+
 import Logo from "../assets/Logo.png";
 import SignupImg from "../assets/SignupImg.png";
 import Facebook from "../assets/Facebook.png";
@@ -5,10 +11,58 @@ import Google from "../assets/Google.png";
 import Apple from "../assets/Apple.png";
 
 const Signup = () => {
+  const navigate = useNavigate();
+
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [error, setError] = useState("");
+  const [privacy, setPrivacy] = useState(false);
+
+  const handleSignUp = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError("");
+
+    if (!firstName || !lastName || !email || !password || !confirmPassword) {
+      setError("Please fill in all fields.");
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      setError("Passwords do not match.");
+      return;
+    }
+
+    if (!privacy) {
+      setError("Please accept the Terms and Privacy Policies.");
+      return;
+    }
+
+    try {
+      const result = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password,
+      );
+
+      await setDoc(doc(db, "users", result.user.uid), {
+        firstName,
+        lastName,
+        email,
+      });
+
+      navigate("/Home");
+    } catch (err: any) {
+      setError(err.message);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900">
       <header className="mx-auto flex h-16 max-w-6xl items-center justify-end px-6">
-        <img src={Logo} alt="Your Logo" className="h-7 w-auto object-contain" />
+        <img src={Logo} alt="Logo" className="h-7 w-auto object-contain" />
       </header>
 
       <main className="mx-auto flex max-w-6xl items-center justify-center px-6 py-4">
@@ -21,7 +75,7 @@ const Signup = () => {
             />
           </div>
           <div className="w-full max-w-md">
-            <form>
+            <form onSubmit={handleSignUp}>
               <h1 className="text-[40px] font-semibold text-slate-900">
                 Sign up
               </h1>
@@ -29,28 +83,40 @@ const Signup = () => {
                 Let's get you all set up so you can access your personal
                 account.
               </p>
+
+              {error && (
+                <div className="mt-3 rounded border border-red-400 bg-red-100 px-3 py-2 text-sm text-red-700">
+                  {error}
+                </div>
+              )}
+
               <div className="mt-5 grid grid-cols-2 gap-3">
                 <div>
                   <label className="mb-1 block text-[14px] text-gray-600">
                     First Name
-                    <input
-                      type="text"
-                      placeholder="Full Name"
-                      className="h-9.75 w-full rounded-sm border border-black px-2 text-[16px] outline-none focus:border-indigo-500"
-                    />
                   </label>
+                  <input
+                    type="text"
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                    placeholder="First Name"
+                    className="h-9.75 w-full rounded-sm border border-black px-2 text-[16px] outline-none focus:border-indigo-500"
+                  />
                 </div>
                 <div>
                   <label className="mb-1 block text-[14px] text-gray-600">
                     Last Name
-                    <input
-                      type=""
-                      placeholder="Last Name"
-                      className="h-9.75 w-full rounded-sm border border-black px-2 text-[16px] outline-none focus:border-indigo-500"
-                    />
                   </label>
+                  <input
+                    type="text"
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                    placeholder="Last Name"
+                    className="h-9.75 w-full rounded-sm border border-black px-2 text-[16px] outline-none focus:border-indigo-500"
+                  />
                 </div>
               </div>
+
               <div className="mt-2 grid grid-cols-2 gap-2">
                 <div>
                   <label className="mb-1 block text-[14px] text-gray-600">
@@ -58,7 +124,9 @@ const Signup = () => {
                   </label>
                   <input
                     type="email"
-                    placeholder="@gmail.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="example@gmail.com"
                     className="h-9.75 w-full rounded-sm border border-black px-2 text-[16px] outline-none focus:border-indigo-500"
                   />
                 </div>
@@ -74,50 +142,54 @@ const Signup = () => {
                   />
                 </div>
               </div>
+
               <div className="mt-2">
                 <label className="mb-1 block text-[14px] text-gray-600">
                   Password
                 </label>
-
-                <div className="relative">
-                  <input
-                    type="password"
-                    placeholder="**4******************f"
-                    className="h-9.75 w-full rounded-sm border border-black px-2 pr-8 text-[16px] outline-none focus:border-indigo-500"
-                  />
-                </div>
+                <input
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="••••••••"
+                  className="h-9.75 w-full rounded-sm border border-black px-2 text-[16px] outline-none focus:border-indigo-500"
+                />
               </div>
+
               <div className="mt-2">
                 <label className="mb-1 block text-[14px] text-gray-600">
                   Confirm Password
                 </label>
-
-                <div className="relative">
-                  <input
-                    type="password"
-                    placeholder="**4******************f"
-                    className="h-9.75 w-full rounded-sm border border-black px-2 pr-8 text-[16px] outline-none focus:border-indigo-500"
-                  />
-                </div>
+                <input
+                  type="password"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                  placeholder="••••••••"
+                  className="h-9.75 w-full rounded-sm border border-black px-2 text-[16px] outline-none focus:border-indigo-500"
+                />
               </div>
-              <div className="mt-3 flex items-center gap-1">
+
+              <div className="mt-3 flex items-center gap-2">
                 <input
                   type="checkbox"
+                  checked={privacy}
+                  onChange={(e) => setPrivacy(e.target.checked)}
                   className="h-4.5 w-4.5 accent-indigo-500"
                 />
-
                 <p className="text-[14px] text-gray-600">
                   I agree to all the{" "}
                   <span className="text-[#FF8682]">Terms</span> and{" "}
                   <span className="text-[#FF8682]">Privacy Policies</span>
                 </p>
               </div>
+
               <button
                 type="submit"
                 className="mt-4 h-8 w-full rounded-sm bg-indigo-500 text-[14px] font-medium text-white transition hover:bg-indigo-600"
               >
                 Create account
               </button>
+
               <div className="my-4 flex items-center gap-2">
                 <div className="h-px flex-1 bg-gray-200" />
                 <span className="text-[14px] text-gray-400">
@@ -125,24 +197,25 @@ const Signup = () => {
                 </span>
                 <div className="h-px flex-1 bg-gray-200" />
               </div>
+
               <div className="grid grid-cols-3 gap-2">
                 <button
                   type="button"
                   className="flex h-12.5 items-center justify-center rounded-sm border"
                 >
-                  <img src={Facebook} alt="" />
-                </button>
-                <button
-                  type="button"
-                  className="flex  h-12.5 items-center justify-center rounded-sm border"
-                >
-                  <img src={Google} alt="" />
+                  <img src={Facebook} alt="Facebook" />
                 </button>
                 <button
                   type="button"
                   className="flex h-12.5 items-center justify-center rounded-sm border"
                 >
-                  <img src={Apple} alt="" />
+                  <img src={Google} alt="Google" />
+                </button>
+                <button
+                  type="button"
+                  className="flex h-12.5 items-center justify-center rounded-sm border"
+                >
+                  <img src={Apple} alt="Apple" />
                 </button>
               </div>
             </form>
