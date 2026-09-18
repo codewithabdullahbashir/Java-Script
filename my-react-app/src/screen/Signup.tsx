@@ -33,7 +33,7 @@ const Signup = () => {
                     <input
                       type="text"
                       placeholder="Full Name"
-                      className="h-9.75 w-full rounded-sm border border-gray-300 px-2 text-[16px] outline-none focus:border-indigo-500"
+                      className="h-9.75 w-full rounded-sm border border-black px-2 text-[16px] outline-none focus:border-indigo-500"
                     />
                   </label>
                 </div>
@@ -43,7 +43,7 @@ const Signup = () => {
                     <input
                       type=""
                       placeholder="Last Name"
-                      className="h-9.75 w-full rounded-sm border border-gray-300 px-2 text-[16px] outline-none focus:border-indigo-500"
+                      className="h-9.75 w-full rounded-sm border border-black px-2 text-[16px] outline-none focus:border-indigo-500"
                     />
                   </label>
                 </div>
@@ -56,7 +56,7 @@ const Signup = () => {
                   <input
                     type="email"
                     placeholder="@gmail.com"
-                    className="h-9.75 w-full rounded-sm border border-gray-300 px-2 text-[16px] outline-none focus:border-indigo-500"
+                    className="h-9.75 w-full rounded-sm border border-black px-2 text-[16px] outline-none focus:border-indigo-500"
                   />
                 </div>
 
@@ -67,7 +67,7 @@ const Signup = () => {
                   <input
                     type="tel"
                     placeholder="+92 3000000000"
-                    className="h-9.75 w-full rounded-sm border border-gray-300 px-2 text-[16px] outline-none focus:border-indigo-500"
+                    className="h-9.75 w-full rounded-sm border border-black px-2 text-[16px] outline-none focus:border-indigo-500"
                   />
                 </div>
               </div>
@@ -80,7 +80,7 @@ const Signup = () => {
                   <input
                     type="password"
                     placeholder="**4******************f"
-                    className="h-9.75 w-full rounded-sm border border-gray-300 px-2 pr-8 text-[16px] outline-none focus:border-indigo-500"
+                    className="h-9.75 w-full rounded-sm border border-black px-2 pr-8 text-[16px] outline-none focus:border-indigo-500"
                   />
                 </div>
               </div>
@@ -93,7 +93,7 @@ const Signup = () => {
                   <input
                     type="password"
                     placeholder="**4******************f"
-                    className="h-9.75 w-full rounded-sm border border-gray-300 px-2 pr-8 text-[16px] outline-none focus:border-indigo-500"
+                    className="h-9.75 w-full rounded-sm border border-black px-2 pr-8 text-[16px] outline-none focus:border-indigo-500"
                   />
                 </div>
               </div>
