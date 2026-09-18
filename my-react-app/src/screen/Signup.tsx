@@ -1,5 +1,8 @@
 import Logo from "../assets/Logo.png";
 import SignupImg from "../assets/SignupImg.png";
+import Facebook from "../assets/Facebook.png";
+import Google from "../assets/Google.png";
+import Apple from "../assets/Apple.png";
 
 const Signup = () => {
   return (
@@ -121,6 +124,26 @@ const Signup = () => {
                   Or Sign up with
                 </span>
                 <div className="h-px flex-1 bg-gray-200" />
+              </div>
+              <div className="grid grid-cols-3 gap-2">
+                <button
+                  type="button"
+                  className="flex h-12.5 items-center justify-center rounded-sm border"
+                >
+                  <img src={Facebook} alt="" />
+                </button>
+                <button
+                  type="button"
+                  className="flex  h-12.5 items-center justify-center rounded-sm border"
+                >
+                  <img src={Google} alt="" />
+                </button>
+                <button
+                  type="button"
+                  className="flex h-12.5 items-center justify-center rounded-sm border"
+                >
+                  <img src={Apple} alt="" />
+                </button>
               </div>
             </form>
           </div>
