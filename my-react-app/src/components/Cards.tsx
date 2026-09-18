@@ -12,8 +12,7 @@ interface CardProps {
 const Cards: React.FC<CardProps> = (props) => {
   return (
     <div className="relative flex w-full items-center gap-4 overflow-hidden rounded-md border-t-2 border-[#4F228D] bg-[#16052D] p-5">
-
-      <div className="absolute -left-10 -top-12 h-32 w-32 rounded-full bg-[#1e0544] opacity-50 blur-2xl" />
+      <div className="absolute -left-10 -top-12 h-42 w-42 rounded-full bg-[#1e0544] opacity-50 blur-2xl" />
 
       <div className="relative flex h-16 w-16 shrink-0 items-center justify-center">
         <img

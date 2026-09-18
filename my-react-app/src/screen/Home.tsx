@@ -21,17 +21,23 @@ const Home = () => {
   return (
     <div className="min-h-screen w-auto overflow-x-hidden bg-[#0b0218] font-sans text-white">
       <nav className="bg-[#1A0B2E]">
-        <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
-          <img src={MyLogo} alt="Logo" className="h-6 w-6 object-contain" />
+        <div className="mx-auto flex h-16 max-w-3xl items-center justify-between px-6">
+          <img
+            src={MyLogo}
+            alt="Logo"
+            className="h-9 w-9 object-contain sm:h-10 sm:w-10"
+          />
 
-          <div className="flex gap-8 text-xs sm:gap-16">
-            <a href="#" className="font-bold hover:text-purple-400">
+          <div className="flex items-center gap-5 text-[16px] sm:gap-8 sm:text-[20px]">
+            <a href="#" className="font-bold">
               Home
             </a>
-            <a href="#" className="font-bold hover:text-purple-400">
+
+            <a href="#" className="font-bold">
               About
             </a>
-            <a href="#" className="font-bold hover:text-purple-400">
+
+            <a href="#" className="font-bold">
               Lab
             </a>
           </div>
@@ -177,7 +183,7 @@ const Home = () => {
 
         <section className="relative mx-auto mt-10 w-full max-w-184">
           <div
-            className="pointer-events-none absolute -right-10 top-1/2 z-0 h-112.5 w-175 -translate-y-1/2 bg-center bg-no-repeat blur-5xl"
+            className="pointer-events-none absolute -right-5 top-1/2 z-0 h-112.5 w-175 -translate-y-1/2 bg-center bg-no-repeat blur-5xl"
             style={{ backgroundImage: `url(${Gradient})` }}
           />
           <div
@@ -221,13 +227,9 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="relative mx-auto mt-10 w-full max-w-184 px-4 sm:px-0">
+        <section className="relative mx-auto mt-20 w-full max-w-184 px-4 sm:px-0">
           <div
-            className="pointer-events-none absolute -left-20 top-1/2 z-0 h-112.5 w-175 -translate-y-1/2 bg-center bg-no-repeat blur-5xl"
-            style={{ backgroundImage: `url(${Gradient})` }}
-          />
-          <div
-            className="pointer-events-none absolute -right-20 top-1/2 z-0 h-112.5 w-175 -translate-y-1/2 bg-center bg-no-repeat blur-5xl"
+            className="pointer-events-none absolute -left-70 top-1/2 z-0 h-112.5 w-175 -translate-y-1/2 bg-center bg-no-repeat blur-3xl"
             style={{ backgroundImage: `url(${Gradient})` }}
           />
 
@@ -261,7 +263,7 @@ const Home = () => {
               <img
                 src={S2}
                 alt="Example Project preview"
-                className="absolute left-0 top-5 h-47.5 w-[94%] rounded-md object-cover sm:h-51 sm:w-88"
+                className="absolute left-0 top-6 h-47.5 w-[94%] rounded-md object-cover sm:h-51 sm:w-88"
               />
             </div>
           </div>
@@ -277,7 +279,7 @@ const Home = () => {
 
           <a
             href="mailto:ibrhaimmemon930@gmail.com"
-            className="mt-6 inline-block text-sm text-gray-200 hover:text-purple-400"
+            className="mt-6 inline-block text-sm text-gray-200"
           >
             ibrhaimmemon930@gmail.com
           </a>
