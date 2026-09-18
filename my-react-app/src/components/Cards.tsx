@@ -25,16 +25,25 @@ const Cards: React.FC<CardProps> = (props) => {
       <div className="relative z-10 flex flex-col justify-center">
         <div className="absolute -left-6 -top-6 -z-10 h-16 w-16 rounded-full bg-[#6d17e4] opacity-40 blur-xl" />
 
-        <h3 className="text-[26px] font-medium text-white tracking-tight">
+        <h3
+          className="text-[26px] font-medium text-white tracking-tight"
+          style={{ fontFamily: "Helvetica" }}
+        >
           {props.title}
         </h3>
 
-        <p className="mt-1 text-[8px] leading-relaxed text-white/90">
+        <p
+          className="mt-1 text-[8px] leading-relaxed text-white/90"
+          style={{ fontFamily: "Sora" }}
+        >
           {props.text1} <br />
           {props.text2}
         </p>
 
-        <button className="mt-3 w-max rounded-md border border-[#693B93] bg-[#2C1250] px-3 py-1 text-[10px] font-semibold text-white">
+        <button
+          className="mt-3 w-max rounded-md border border-[#693B93] bg-[#2C1250] px-3 py-1 text-[10px] font-semibold text-white"
+          style={{ fontFamily: "Helvetica" }}
+        >
           {props.text3}
         </button>
       </div>

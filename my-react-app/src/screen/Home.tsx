@@ -28,7 +28,10 @@ const Home = () => {
             className="h-9 w-9 object-contain sm:h-10 sm:w-10"
           />
 
-          <div className="flex items-center gap-5 text-[16px] sm:gap-8 sm:text-[20px]">
+          <div
+            className="flex items-center gap-5 text-[16px] sm:gap-8 sm:text-[20px]"
+            style={{ fontFamily: "Sora" }}
+          >
             <a href="#" className="font-bold">
               Home
             </a>
@@ -71,17 +74,34 @@ const Home = () => {
                 className="absolute -top-10 left-1/2 h-40 w-auto -translate-x-1/2 sm:-left-35 sm:translate-x-0"
               />
 
-              <p className="relative mb-2 text-xs sm:mb-4">
-                Hello! I Am <span className="text-purple-500">Abdullah</span>
+              <p
+                className="relative mb-2 text-xs sm:mb-4"
+                style={{ fontFamily: "Helvetica" }}
+              >
+                Hello! I Am{" "}
+                <span
+                  className="text-purple-500"
+                  style={{ fontFamily: "Helvetica" }}
+                >
+                  Abdullah
+                </span>
               </p>
 
-              <p className="text-xs">A Designer who</p>
+              <p className="text-xs" style={{ fontFamily: "Sora" }}>
+                A Designer who
+              </p>
 
-              <h1 className="mt-1 text-3xl font-normal leading-tight sm:text-4xl">
+              <h1
+                className="mt-1 text-3xl font-normal leading-tight sm:text-4xl"
+                style={{ fontFamily: "Helvetica" }}
+              >
                 Judges a book
                 <br />
                 by its{" "}
-                <span className="relative inline-block px-1 text-purple-500">
+                <span
+                  className="relative inline-block px-1 text-purple-500"
+                  style={{ fontFamily: "Helvetica" }}
+                >
                   <span>cover</span>
                   <img
                     src={Ovel}
@@ -92,19 +112,30 @@ const Home = () => {
                 ...
               </h1>
 
-              <p className="mt-2 text-xs text-gray-300">
+              <p
+                className="mt-2 text-xs text-gray-300"
+                style={{ fontFamily: "Sora" }}
+              >
                 Because if the cover does not impress you what else can?
               </p>
             </div>
           </div>
 
           <div className="mt-16 text-center sm:text-left">
-            <h2 className="text-2xl font-medium sm:text-3xl">
+            <h2
+              className="text-2xl font-medium sm:text-3xl"
+              style={{ fontFamily: "Helvetica" }}
+            >
               I'm a Software Engineer.|
             </h2>
 
-            <p className="mt-2 flex items-center justify-center text-sm sm:justify-start">
-              <span>Currently, I'm a Software Engineer at</span>
+            <p
+              className="mt-2 flex items-center justify-center text-sm sm:justify-start"
+              style={{ fontFamily: "Sora" }}
+            >
+              <span style={{ fontFamily: "Helvetica" }}>
+                Currently, I'm a Software Engineer at
+              </span>
 
               <img
                 src={Facebook}
@@ -115,7 +146,10 @@ const Home = () => {
               <span>Facebook</span>
             </p>
 
-            <p className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-gray-300 sm:mx-0">
+            <p
+              className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-gray-300 sm:mx-0"
+              style={{ fontFamily: "Sora" }}
+            >
               A self-taught UI/UX designer, functioning in the industry for 3+
               years now. I make meaningful and delightful digital products that
               create an equilibrium between user needs and business goals.
@@ -124,7 +158,10 @@ const Home = () => {
         </section>
 
         <section className="relative mx-auto mt-20 max-w-195">
-          <h2 className="relative z-10 mb-8 text-center text-2xl font-bold sm:text-left">
+          <h2
+            className="relative z-10 mb-8 text-center text-2xl font-bold sm:text-left"
+            style={{ fontFamily: "Helvetica" }}
+          >
             Work Experience
           </h2>
 
@@ -192,17 +229,23 @@ const Home = () => {
           />
 
           <div className="relative flex flex-col gap-6 md:block md:min-h-53.5">
-            <div className="relative z-20 pt-4">
+            <div className="relative z-20 ">
               <p className="mb-1 text-xs font-bold text-purple-400">
                 Featured Project
               </p>
 
-              <h2 className="mb-5 text-[22px] font-bold leading-tight text-[#c9c9ee]">
+              <h2
+                className="mb-5 text-[22px] font-bold leading-tight text-[#c9c9ee]"
+                style={{ fontFamily: "Helvetica" }}
+              >
                 Example Project
               </h2>
 
-              <div className="relative z-30 min-h-26.25 w-full max-w-105 rounded-xl bg-linear-to-r from-[#24183d]/95 via-[#4a3b70]/95 to-[#e7dff0]/90 p-5 shadow-2xl backdrop-blur-lg">
-                <p className="text-[12px] leading-[1.45] text-[#CCD6F6]">
+              <div
+                className="relative z-30 min-h-26.25 w-full max-w-105 rounded-xl bg-linear-to-r from-[#24183d]/95 via-[#4a3b70]/95 to-[#cfc3db]/90 p-5 shadow-2xl backdrop-blur-lg"
+                style={{ fontFamily: "Sora" }}
+              >
+                <p className="text-[12px] leading-[1.45] text-white">
                   A web app for visualizing personalized Spotify data. View your
                   top artists, top tracks, recently played tracks, and detailed
                   audio information about each track. Create and save new
@@ -235,16 +278,25 @@ const Home = () => {
 
           <div className="relative min-h-53.5">
             <div className="relative z-20 mx-auto w-full max-w-110 text-center md:ml-auto md:mr-0 md:mt-4 md:text-right">
-              <p className="mb-1 text-xs font-bold text-purple-400">
+              <p
+                className="mb-1 text-xs font-bold text-purple-400"
+                style={{ fontFamily: "Sora" }}
+              >
                 Featured Project
               </p>
 
-              <h2 className="mb-5 text-[22px] font-bold leading-tight text-[#c9c9ee]">
+              <h2
+                className="mb-5 text-[22px] font-bold leading-tight text-[#c9c9ee]"
+                style={{ fontFamily: "Helvetica" }}
+              >
                 Example Project
               </h2>
 
-              <div className="relative z-30 h-auto min-h-26.25 w-full max-w-105 rounded-xl bg-linear-to-r from-[#e7dff0]/95 via-[#4a3b70]/95 to-[#24183d]/90 p-5 text-left shadow-2xl backdrop-blur-lg md:ml-auto">
-                <p className="text-[12px] leading-[1.45] text-[#CCD6F6]">
+              <div className="relative z-30 h-auto min-h-26.25 w-full max-w-105 rounded-xl bg-linear-to-r from-[#cfc3db]/95 via-[#4a3b70]/95 to-[#24183d]/90 p-5 text-left shadow-2xl backdrop-blur-lg md:ml-auto">
+                <p
+                  className="text-[12px] leading-[1.45] text-white"
+                  style={{ fontFamily: "Sora" }}
+                >
                   A web app for visualizing personalized Spotify data. View your
                   top artists, top tracks, recently played tracks, and detailed
                   audio information about each track. Create and save new
@@ -259,11 +311,11 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="relative z-10 mx-auto mt-6 h-53.5 w-full max-w-91.5 rounded-md bg-[#310235] md:absolute md:left-0 md:top-0 md:mx-0 md:mt-0">
+            <div className="relative z-10 mx-auto mt-6 h-57.5 w-full max-w-91.5 rounded-md bg-[#260229] md:absolute md:left-0 md:top-0 md:mx-0 md:mt-0">
               <img
                 src={S2}
                 alt="Example Project preview"
-                className="absolute left-0 top-6 h-47.5 w-[94%] rounded-md object-cover sm:h-51 sm:w-88"
+                className="absolute left-0 top-6 h-40.5 w-[94%] rounded-md object-cover sm:h-51 sm:w-88"
               />
             </div>
           </div>
@@ -271,7 +323,10 @@ const Home = () => {
         <section className="mt-32 pb-24 text-center sm:text-left">
           <h1 className="text-2xl font-bold">Contact</h1>
 
-          <p className="mx-auto mt-6 max-w-xl text-sm leading-6 text-gray-300 sm:mx-0">
+          <p
+            className="mx-auto mt-20 max-w-xl text-sm leading-6 text-gray-300 sm:mx-0"
+            style={{ fontFamily: "Sora" }}
+          >
             I'm currently looking to join a cross-functional team that values
             improving people's lives through accessible design. or have a
             project in mind? Let's connect.
@@ -280,6 +335,7 @@ const Home = () => {
           <a
             href="mailto:ibrhaimmemon930@gmail.com"
             className="mt-6 inline-block text-sm text-gray-200"
+            style={{ fontFamily: "Sora" }}
           >
             ibrhaimmemon930@gmail.com
           </a>
