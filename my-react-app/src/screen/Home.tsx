@@ -12,10 +12,11 @@ import Ovel from "../assets/Ovel.png";
 import Facebook from "../assets/Facebook.png";
 import Cards from "../components/Cards";
 import S1 from "../assets/S1.png";
+import S2 from "../assets/S2.png";
 
 const Home = () => {
   return (
-    <div className="min-h-screen w-auto bg-[#0b0218] font-sans text-white overflow-x-hidden">
+    <div className="min-h-screen w-auto overflow-x-hidden bg-[#0b0218] font-sans text-white">
       <nav className="bg-[#1A0B2E]">
         <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
           <img src={MyLogo} alt="Logo" className="h-6 w-6 object-contain" />
@@ -34,20 +35,19 @@ const Home = () => {
         </div>
       </nav>
 
-      <main className="mx-auto max-w-5xl px-6">
+      <main className="mx-auto max-w-3xl px-6">
         <section className="relative mt-12 sm:mt-20">
-          <div className="flex flex-col items-center gap-8 sm:flex-row sm:items-start sm:justify-start">
-            <div className="relative flex h-56 w-56 shrink-0 items-center justify-center sm:h-64 sm:w-64">
+          <div className="flex flex-col items-center gap-8 sm:flex-row sm:items-start sm:justify-center">
+            <div
+              className="relative flex h-56 w-56 shrink-0 items-center justify-center overflow-hidden rounded-full bg-cover bg-center bg-no-repeat sm:h-64 sm:w-64"
+              style={{ backgroundImage: `url(${Gradient})` }}
+            >
               <img
                 src={Ellipse}
                 alt=""
                 className="absolute inset-0 h-full w-full object-contain"
               />
-              <img
-                src={Gradient}
-                alt=""
-                className="absolute inset-0 h-full w-full object-contain"
-              />
+
               <img
                 src={My}
                 alt="Portrait of Abdullah"
@@ -59,8 +59,9 @@ const Home = () => {
               <img
                 src={Arrow}
                 alt=""
-                className="absolute -top-10 left-1/2 -translate-x-1/2 sm:-left-35 sm:translate-x-0 h-40 w-auto"
+                className="absolute -top-10 left-1/2 h-40 w-auto -translate-x-1/2 sm:-left-35 sm:translate-x-0"
               />
+
               <p className="relative mb-2 text-xs sm:mb-4">
                 Hello! I Am <span className="text-purple-500">Abdullah</span>
               </p>
@@ -76,7 +77,7 @@ const Home = () => {
                   <img
                     src={Ovel}
                     alt=""
-                    className="absolute inset-0  h-full w-full "
+                    className="absolute inset-0 h-full w-full"
                   />
                 </span>
                 ...
@@ -88,22 +89,24 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="mt-16">
+          <div className="mt-16 text-center sm:text-left">
             <h2 className="text-2xl font-medium sm:text-3xl">
               I'm a Software Engineer.|
             </h2>
 
             <p className="mt-2 flex items-center justify-center text-sm sm:justify-start">
               <span>Currently, I'm a Software Engineer at</span>
+
               <img
                 src={Facebook}
                 alt="Facebook"
                 className="mx-2 h-4 w-4 object-contain"
               />
+
               <span>Facebook</span>
             </p>
 
-            <p className="mt-6 max-w-xl text-sm leading-relaxed text-gray-300">
+            <p className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-gray-300 sm:mx-0">
               A self-taught UI/UX designer, functioning in the industry for 3+
               years now. I make meaningful and delightful digital products that
               create an equilibrium between user needs and business goals.
@@ -111,8 +114,8 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="relative mt-20 max-w-195 ">
-          <h2 className="relative z-10 mb-8 text-2xl font-bold">
+        <section className="relative mx-auto mt-20 max-w-195">
+          <h2 className="relative z-10 mb-8 text-center text-2xl font-bold sm:text-left">
             Work Experience
           </h2>
 
@@ -162,14 +165,26 @@ const Home = () => {
         </section>
 
         <section className="relative mt-30 flex flex-col items-center overflow-hidden pb-10 text-center">
-          <img src={Main} alt="Main" className="h-auto max-w-145" />
+          <img
+            src={Main}
+            alt="Main"
+            className="h-auto w-full max-w-145 object-contain"
+          />
         </section>
 
         <section className="relative mx-auto mt-10 w-full max-w-184">
-          <div className="pointer-events-none absolute -right-8 top-1/2 h-72 w-96 -translate-y-1/2 rounded-full bg-purple-700/20 blur-[100px]" />
+          <div
+            className="pointer-events-none absolute -right-10 top-1/2 z-0 h-112.5 w-175 -translate-y-1/2 bg-center bg-no-repeat blur-5xl"
+            style={{ backgroundImage: `url(${Gradient})` }}
+          />
+
+          <div
+            className="pointer-events-none absolute -right-10 left-50 top-1/2 z-0 h-112.5 w-175 -translate-y-1/2 bg-center bg-no-repeat blur-5xl"
+            style={{ backgroundImage: `url(${Gradient})` }}
+          />
 
           <div className="relative min-h-53.5">
-            <div className="relative z-20 pt-4 md:pt-4">
+            <div className="relative z-20 pt-4">
               <p className="mb-1 text-xs font-bold text-purple-400">
                 Featured Project
               </p>
@@ -178,57 +193,7 @@ const Home = () => {
                 Example Project
               </h2>
 
-              <div className="relative z-30 w-full max-w-105 rounded-xl bg-linear-to-r from-[#24183d]/95 via-[#4a3b70]/95 to-[#e7dff0]/90 p-5 shadow-2xl backdrop-blur-lg md:h-26.25">
-                <p className="text-[18px] leading-[1.45] text-[#CCD6F6] md:text-[12px]">
-                  A web app for visualizing personalized Spotify data. View your
-                  top artists, top tracks, recently played tracks, and detailed
-                  audio information about each track. Create and save new
-                  playlists of recommended tracks based on your existing
-                  playlists and more.
-                </p>
-              </div>
-
-              <div className="mt-5 flex gap-3 text-xl text-white">
-                <span aria-hidden>❋</span>
-                <span aria-hidden>❋</span>
-              </div>
-            </div>
-
-            <div className="absolute right-0 top-0 z-10 hidden h-56.5 w-91.5 rounded-md bg-[#310235] p-0 md:block ">
-              <img
-                src={S1}
-                alt="Example Project preview"
-                className="absolute right-0 top-4.5 h-52 w-84.5  object-cover"
-              />
-            </div>
-          </div>
-        </section>
-        <section className="relative mx-auto mt-10 w-full max-w-[770px]">
-          {/* Purple glow */}
-          <div className="pointer-events-none absolute -left-10 top-1/2 h-72 w-96 -translate-y-1/2 rounded-full bg-purple-700/20 blur-[100px]" />
-
-          <div className="relative min-h-[224px]">
-            {/* Project Image */}
-            <div className="absolute left-0 top-0 z-10 h-[224px] w-[384px] rounded-md bg-[#310235]">
-              <img
-                src={S1}
-                alt="Example Project preview"
-                className="absolute left-0 top-5 h-[204px] w-[352px] rounded-l-md object-cover"
-              />
-            </div>
-
-            {/* Project Content */}
-            <div className="relative z-20 ml-auto flex w-[440px] flex-col items-end pt-1">
-              <p className="mb-1 text-xs font-bold text-purple-400">
-                Featured Project
-              </p>
-
-              <h2 className="mb-5 text-[22px] font-bold leading-tight text-[#c9c9ee]">
-                Example Project
-              </h2>
-
-              {/* Description Card */}
-              <div className="w-full rounded-xl bg-linear-to-r from-[#4a3b70]/95 via-[#24183d]/95 to-[#120d26]/95 p-5 shadow-2xl backdrop-blur-lg">
+              <div className="relative z-30 h-26.25 w-full max-w-105 rounded-xl bg-linear-to-r from-[#24183d]/95 via-[#4a3b70]/95 to-[#e7dff0]/90 p-5 shadow-2xl backdrop-blur-lg">
                 <p className="text-[12px] leading-[1.45] text-[#CCD6F6]">
                   A web app for visualizing personalized Spotify data. View your
                   top artists, top tracks, recently played tracks, and detailed
@@ -238,8 +203,62 @@ const Home = () => {
                 </p>
               </div>
 
-              {/* Icons */}
               <div className="mt-5 flex gap-3 text-xl text-white">
+                <span aria-hidden>❋</span>
+                <span aria-hidden>❋</span>
+              </div>
+            </div>
+
+            <div className="absolute right-0 top-0 z-10 hidden h-53.5 w-91.5 rounded-md bg-[#310235] md:block">
+              <img
+                src={S1}
+                alt="Example Project preview"
+                className="absolute right-0 top-4.5 h-49 w-84.5 object-cover"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section className="relative mx-auto mt-10 w-full max-w-184 px-4 sm:px-0">
+          <div
+            className="pointer-events-none absolute -left-20 top-1/2 z-0 h-112.5 w-175 -translate-y-1/2 bg-center bg-no-repeat blur-5xl"
+            style={{ backgroundImage: `url(${Gradient})` }}
+          />
+
+          <div
+            className="pointer-events-none absolute -right-20 top-1/2 z-0 h-112.5 w-175 -translate-y-1/2 bg-center bg-no-repeat blur-5xl"
+            style={{ backgroundImage: `url(${Gradient})` }}
+          />
+
+          <div className="relative min-h-53.5">
+            <div className="relative z-10 mx-auto h-53.5 w-full max-w-91.5 rounded-md bg-[#310235] md:absolute md:left-0 md:top-0 md:mx-0">
+              <img
+                src={S2}
+                alt="Example Project preview"
+                className="absolute left-0 top-5 h-47.5 w-[94%] rounded-md object-cover sm:h-51 sm:w-88"
+              />
+            </div>
+
+            <div className="relative z-20 mx-auto mt-7 w-full max-w-110 text-center md:ml-auto md:mr-0 md:mt-4 md:text-right">
+              <p className="mb-1 text-xs font-bold text-purple-400">
+                Featured Project
+              </p>
+
+              <h2 className="mb-5 text-[22px] font-bold leading-tight text-[#c9c9ee]">
+                Example Project
+              </h2>
+
+              <div className="relative z-30 h-auto min-h-26.25 w-full max-w-105 rounded-xl bg-linear-to-r from-[#e7dff0]/95 via-[#4a3b70]/95 to-[#24183d]/90 p-5 text-left shadow-2xl backdrop-blur-lg md:ml-auto">
+                <p className="text-[12px] leading-[1.45] text-[#CCD6F6]">
+                  A web app for visualizing personalized Spotify data. View your
+                  top artists, top tracks, recently played tracks, and detailed
+                  audio information about each track. Create and save new
+                  playlists of recommended tracks based on your existing
+                  playlists and more.
+                </p>
+              </div>
+
+              <div className="mt-5 flex justify-center gap-3 text-xl text-white md:justify-end">
                 <span aria-hidden>❋</span>
                 <span aria-hidden>❋</span>
               </div>
@@ -247,10 +266,10 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="mt-32 pb-24">
+        <section className="mt-32 pb-24 text-center sm:text-left">
           <h1 className="text-2xl font-bold">Contact</h1>
 
-          <p className="mt-6 max-w-xl text-sm leading-6 text-gray-300">
+          <p className="mx-auto mt-6 max-w-xl text-sm leading-6 text-gray-300 sm:mx-0">
             I'm currently looking to join a cross-functional team that values
             improving people's lives through accessible design. or have a
             project in mind? Let's connect.
@@ -263,19 +282,21 @@ const Home = () => {
             ibrhaimmemon930@gmail.com
           </a>
 
-          <div className="mt-6 flex gap-4 text-xs font-bold">
+          <div className="mt-6 flex justify-center gap-4 text-xs font-bold sm:justify-start">
             <a
               href="#"
               className="flex h-9 w-9 items-center justify-center rounded-full border border-gray-600 hover:border-purple-400 hover:text-purple-400"
             >
               IG
             </a>
+
             <a
               href="#"
               className="flex h-9 w-9 items-center justify-center rounded-full border border-gray-600 hover:border-purple-400 hover:text-purple-400"
             >
               Dr
             </a>
+
             <a
               href="#"
               className="flex h-9 w-9 items-center justify-center rounded-full border border-gray-600 hover:border-purple-400 hover:text-purple-400"

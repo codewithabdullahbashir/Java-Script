@@ -12,10 +12,9 @@ interface CardProps {
 const Cards: React.FC<CardProps> = (props) => {
   return (
     <div className="relative flex w-full items-center gap-4 overflow-hidden rounded-md border-t-2 border-[#4F228D] bg-[#16052D] p-5">
-      {/* Background Glow Overlay */}
+
       <div className="absolute -left-10 -top-12 h-32 w-32 rounded-full bg-[#1e0544] opacity-50 blur-2xl" />
 
-      {/* Image Container */}
       <div className="relative flex h-16 w-16 shrink-0 items-center justify-center">
         <img
           className="h-full w-full object-contain"
@@ -24,7 +23,6 @@ const Cards: React.FC<CardProps> = (props) => {
         />
       </div>
 
-      {/* Content Container */}
       <div className="relative z-10 flex flex-col justify-center">
         <div className="absolute -left-6 -top-6 -z-10 h-16 w-16 rounded-full bg-[#6d17e4] opacity-40 blur-xl" />
 
