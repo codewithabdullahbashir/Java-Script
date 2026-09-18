@@ -109,6 +109,12 @@ const Signup = () => {
                   <span className="text-[#FF8682]">Privacy Policies</span>
                 </p>
               </div>
+              <button
+                type="submit"
+                className="mt-4 h-8 w-full rounded-sm bg-indigo-500 text-[14px] font-medium text-white transition hover:bg-indigo-600"
+              >
+                Create account
+              </button>
             </form>
           </div>
         </div>
