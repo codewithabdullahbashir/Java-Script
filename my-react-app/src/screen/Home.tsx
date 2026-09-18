@@ -13,6 +13,10 @@ import Facebook from "../assets/Facebook.png";
 import Cards from "../components/Cards";
 import S1 from "../assets/S1.png";
 import S2 from "../assets/S2.png";
+import Vector3 from "../assets/Vector3.png";
+import Vector2 from "../assets/Vector 2.png";
+import Vector1 from "../assets/Vector1.png";
+import Vector4 from "../assets/Vector4.png";
 
 const Home = () => {
   return (
@@ -177,13 +181,12 @@ const Home = () => {
             className="pointer-events-none absolute -right-10 top-1/2 z-0 h-112.5 w-175 -translate-y-1/2 bg-center bg-no-repeat blur-5xl"
             style={{ backgroundImage: `url(${Gradient})` }}
           />
-
           <div
             className="pointer-events-none absolute -right-10 left-50 top-1/2 z-0 h-112.5 w-175 -translate-y-1/2 bg-center bg-no-repeat blur-5xl"
             style={{ backgroundImage: `url(${Gradient})` }}
           />
 
-          <div className="relative min-h-53.5">
+          <div className="relative flex flex-col gap-6 md:block md:min-h-53.5">
             <div className="relative z-20 pt-4">
               <p className="mb-1 text-xs font-bold text-purple-400">
                 Featured Project
@@ -193,7 +196,7 @@ const Home = () => {
                 Example Project
               </h2>
 
-              <div className="relative z-30 h-26.25 w-full max-w-105 rounded-xl bg-linear-to-r from-[#24183d]/95 via-[#4a3b70]/95 to-[#e7dff0]/90 p-5 shadow-2xl backdrop-blur-lg">
+              <div className="relative z-30 min-h-26.25 w-full max-w-105 rounded-xl bg-linear-to-r from-[#24183d]/95 via-[#4a3b70]/95 to-[#e7dff0]/90 p-5 shadow-2xl backdrop-blur-lg">
                 <p className="text-[12px] leading-[1.45] text-[#CCD6F6]">
                   A web app for visualizing personalized Spotify data. View your
                   top artists, top tracks, recently played tracks, and detailed
@@ -209,11 +212,11 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="absolute right-0 top-0 z-10 hidden h-53.5 w-91.5 rounded-md bg-[#310235] md:block">
+            <div className="relative z-10 h-53.5 w-full rounded-md bg-[#310235] p-2 sm:w-91.5 md:absolute md:right-0 md:top-0">
               <img
                 src={S1}
                 alt="Example Project preview"
-                className="absolute right-0 top-4.5 h-49 w-84.5 object-cover"
+                className="h-full w-full rounded object-cover"
               />
             </div>
           </div>
@@ -224,22 +227,13 @@ const Home = () => {
             className="pointer-events-none absolute -left-20 top-1/2 z-0 h-112.5 w-175 -translate-y-1/2 bg-center bg-no-repeat blur-5xl"
             style={{ backgroundImage: `url(${Gradient})` }}
           />
-
           <div
             className="pointer-events-none absolute -right-20 top-1/2 z-0 h-112.5 w-175 -translate-y-1/2 bg-center bg-no-repeat blur-5xl"
             style={{ backgroundImage: `url(${Gradient})` }}
           />
 
           <div className="relative min-h-53.5">
-            <div className="relative z-10 mx-auto h-53.5 w-full max-w-91.5 rounded-md bg-[#310235] md:absolute md:left-0 md:top-0 md:mx-0">
-              <img
-                src={S2}
-                alt="Example Project preview"
-                className="absolute left-0 top-5 h-47.5 w-[94%] rounded-md object-cover sm:h-51 sm:w-88"
-              />
-            </div>
-
-            <div className="relative z-20 mx-auto mt-7 w-full max-w-110 text-center md:ml-auto md:mr-0 md:mt-4 md:text-right">
+            <div className="relative z-20 mx-auto w-full max-w-110 text-center md:ml-auto md:mr-0 md:mt-4 md:text-right">
               <p className="mb-1 text-xs font-bold text-purple-400">
                 Featured Project
               </p>
@@ -263,9 +257,16 @@ const Home = () => {
                 <span aria-hidden>❋</span>
               </div>
             </div>
+
+            <div className="relative z-10 mx-auto mt-6 h-53.5 w-full max-w-91.5 rounded-md bg-[#310235] md:absolute md:left-0 md:top-0 md:mx-0 md:mt-0">
+              <img
+                src={S2}
+                alt="Example Project preview"
+                className="absolute left-0 top-5 h-47.5 w-[94%] rounded-md object-cover sm:h-51 sm:w-88"
+              />
+            </div>
           </div>
         </section>
-
         <section className="mt-32 pb-24 text-center sm:text-left">
           <h1 className="text-2xl font-bold">Contact</h1>
 
@@ -283,25 +284,19 @@ const Home = () => {
           </a>
 
           <div className="mt-6 flex justify-center gap-4 text-xs font-bold sm:justify-start">
-            <a
-              href="#"
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-gray-600 hover:border-purple-400 hover:text-purple-400"
-            >
-              IG
+            <a href="#" className="flex h-9 w-9 items-center justify-center ">
+              <img src={Vector1} alt="" />
+            </a>
+
+            <a href="#" className="flex h-9 w-9 items-center justify-center ">
+              <img src={Vector2} alt="" />
             </a>
 
             <a
               href="#"
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-gray-600 hover:border-purple-400 hover:text-purple-400"
+              className="flex h-9 w-9 items-center justify-center rounded-full  "
             >
-              Dr
-            </a>
-
-            <a
-              href="#"
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-gray-600 hover:border-purple-400 hover:text-purple-400"
-            >
-              G
+              <img src={Vector3} alt="" />
             </a>
           </div>
         </section>
@@ -311,3 +306,4 @@ const Home = () => {
 };
 
 export default Home;
+
