@@ -41,7 +41,7 @@ const Home = () => {
             </a>
 
             <a href="#" className="font-bold">
-              Lab
+              SignUp
             </a>
           </div>
         </div>
