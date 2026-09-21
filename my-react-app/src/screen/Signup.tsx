@@ -185,7 +185,7 @@ const Signup = () => {
                   className="h-[24px] w-[24px]  border-8 border-[#313131] "
                 />
                 <p
-                  className="text-[14px] text-[#313131]"
+                  className="text-[14px] text-[#313131] font-[500]"
                   style={{ fontFamily: "Sora" }}
                 >
                   I agree to all the{" "}
@@ -207,13 +207,22 @@ const Signup = () => {
 
               <button
                 type="submit"
-                className="mt-4 h-8 w-full rounded-sm bg-indigo-500 text-[14px] font-medium text-white transition hover:bg-indigo-600"
+                className="mt-13 h-[48px] w-full rounded-[4px] bg-[#515DEF] text-[14px] font-medium text-white"
                 style={{ fontFamily: "Sora" }}
               >
                 Create account
               </button>
+              <div className="h-[10px] w-full justify-center text-center mt-5">
+                <p
+                  className="text-[14px] text-[#313131] font-[500]"
+                  style={{ fontFamily: "Sora" }}
+                >
+                  Already have an account?{" "}
+                  <span className="text-[#FF8682]">Login</span>
+                </p>
+              </div>
 
-              <div className="my-4 flex items-center gap-2">
+              <div className="mt-15 flex items-center gap-2">
                 <div className="h-px flex-1 bg-gray-200" />
                 <span
                   className="text-[14px] text-gray-400"
@@ -224,7 +233,7 @@ const Signup = () => {
                 <div className="h-px flex-1 bg-gray-200" />
               </div>
 
-              <div className="grid grid-cols-3 gap-2">
+              <div className="grid grid-cols-3 gap-2 mt-13">
                 <button
                   type="button"
                   className="flex h-12.5 items-center justify-center rounded-sm border"
