@@ -10,6 +10,8 @@ import SignupImg from "../assets/SignupImg.png";
 import Facebook from "../assets/Facebook.png";
 import Google from "../assets/Google.png";
 import Apple from "../assets/Apple.png";
+import { TextField } from "@mui/material";
+import InputField from "../components/InputField";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -20,6 +22,7 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [privacy, setPrivacy] = useState(false);
 
   const handleSignUp = async (e: React.FormEvent) => {
@@ -84,7 +87,7 @@ const Signup = () => {
                 Sign up
               </h1>
               <p
-                className="mt-1 text-[16px] text-gray-500"
+                className="mt-6.5 text-[16px] text-gray-500"
                 style={{ fontFamily: "Sora" }}
               >
                 Let's get you all set up so you can access your personal
@@ -97,106 +100,80 @@ const Signup = () => {
                 </div>
               )}
 
-              <div className="mt-5 grid grid-cols-2 gap-3">
+              <div className="mt-8 grid grid-cols-2 gap-3">
                 <div>
-                  <label
-                    className="mb-1 block text-[14px] text-gray-600"
-                    style={{ fontFamily: "Helvetica" }}
-                  >
-                    First Name
-                  </label>
-                  <input
+                  <InputField
+                    label="First Name"
+                    name="Firest Name"
+                    placeholder="Jhon"
                     type="text"
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
-                    placeholder="First Name"
-                    className="h-9.75 w-full rounded-sm border border-black px-2 text-[16px] outline-none focus:border-indigo-500"
-                    style={{ fontFamily: "Sora" }}
                   />
                 </div>
                 <div>
-                  <label
-                    className="mb-1 block text-[14px] text-gray-600"
-                    style={{ fontFamily: "Helvetica" }}
-                  >
-                    Last Name
-                  </label>
-                  <input
-                    type="text"
-                    value={lastName}
+                  <InputField
+                    placeholder="Tom"
+                    label="Last Name"
+                    name="Last Name"
                     onChange={(e) => setLastName(e.target.value)}
-                    placeholder="Last Name"
-                    className="h-9.75 w-full rounded-sm border border-black px-2 text-[16px] outline-none focus:border-indigo-500"
-                    style={{ fontFamily: "Sora" }}
+                    value={lastName}
+                    type="text"
                   />
                 </div>
               </div>
 
               <div className="mt-2 grid grid-cols-2 gap-2">
                 <div>
-                  <label
-                    className="mb-1 block text-[14px] text-gray-600"
-                    style={{ fontFamily: "Helvetica" }}
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
+                  <InputField
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="example@gmail.com"
-                    className="h-9.75 w-full rounded-sm border border-black px-2 text-[16px] outline-none focus:border-indigo-500"
-                    style={{ fontFamily: "Sora" }}
+                    label="E-Mail"
+                    name="E-Mail"
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                    }}
+                    type="tel"
+                    placeholder="example123@gmail.com"
                   />
                 </div>
 
                 <div>
-                  <label
-                    className="mb-1 block text-[14px] text-gray-600"
-                    style={{ fontFamily: "Helvetica" }}
-                  >
-                    Phone Number
-                  </label>
-                  <input
+                  <InputField
+                    value={phoneNumber}
+                    label="Phone Number"
+                    name="PhoneNumber"
+                    onChange={(e) => {
+                      setPhoneNumber(e.target.value);
+                    }}
                     type="tel"
                     placeholder="+92 3000000000"
-                    className="h-9.75 w-full rounded-sm border border-black px-2 text-[16px] outline-none focus:border-indigo-500"
-                    style={{ fontFamily: "Sora" }}
                   />
                 </div>
               </div>
 
               <div className="mt-2">
-                <label
-                  className="mb-1 block text-[14px] text-gray-600"
-                  style={{ fontFamily: "Helvetica" }}
-                >
-                  Password
-                </label>
-                <input
+                <InputField
+                  label="Password"
+                  name="Password"
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                  }}
+                  placeholder="***************"
                   type="password"
                   value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  placeholder="••••••••"
-                  className="h-9.75 w-full rounded-sm border border-black px-2 text-[16px] outline-none focus:border-indigo-500"
-                  style={{ fontFamily: "Helvetica" }}
                 />
               </div>
 
               <div className="mt-2">
-                <label
-                  className="mb-1 block text-[14px] text-gray-600"
-                  style={{ fontFamily: "Helvetica" }}
-                >
-                  Confirm Password
-                </label>
-                <input
+                <InputField
+                  label="Confirm Password"
+                  name="confirm Password"
+                  onChange={(e) => {
+                    setConfirmPassword(e.target.value);
+                  }}
+                  placeholder="***************"
                   type="password"
                   value={confirmPassword}
-                  onChange={(e) => setConfirmPassword(e.target.value)}
-                  placeholder="••••••••"
-                  className="h-9.75 w-full rounded-sm border border-black px-2 text-[16px] outline-none focus:border-indigo-500"
-                  style={{ fontFamily: "Sora" }}
                 />
               </div>
 
@@ -205,15 +182,26 @@ const Signup = () => {
                   type="checkbox"
                   checked={privacy}
                   onChange={(e) => setPrivacy(e.target.checked)}
-                  className="h-4.5 w-4.5 accent-indigo-500"
+                  className="h-[24px] w-[24px]  border-8 border-[#313131] "
                 />
                 <p
-                  className="text-[14px] text-gray-600"
+                  className="text-[14px] text-[#313131]"
                   style={{ fontFamily: "Sora" }}
                 >
                   I agree to all the{" "}
-                  <span className="text-[#FF8682]">Terms</span> and{" "}
-                  <span className="text-[#FF8682]">Privacy Policies</span>
+                  <span
+                    className="text-[#FF8682]"
+                    style={{ fontFamily: "Sora" }}
+                  >
+                    Terms
+                  </span>{" "}
+                  and{" "}
+                  <span
+                    className="text-[#FF8682]"
+                    style={{ fontFamily: "Sora" }}
+                  >
+                    Privacy Policies
+                  </span>
                 </p>
               </div>
 
