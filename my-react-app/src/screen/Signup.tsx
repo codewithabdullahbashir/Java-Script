@@ -59,9 +59,11 @@ const Signup = () => {
         email,
       });
 
-      navigate("/Home");
+      navigate("/dashboard");
     } catch (err: any) {
-      setError(err.message);
+      setError(
+        err?.message || "Something went wrong while creating your account.",
+      );
     }
   };
 
@@ -134,7 +136,7 @@ const Signup = () => {
                     onChange={(e) => {
                       setEmail(e.target.value);
                     }}
-                    type="tel"
+                    type="email"
                     placeholder="example123@gmail.com"
                   />
                 </div>
