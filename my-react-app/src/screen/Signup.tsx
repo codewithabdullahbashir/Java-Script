@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { setDoc, doc } from "firebase/firestore";
+// @ts-ignore
 import { auth, db } from "../config/Firebase";
 
 import Logo from "../assets/Logo.png";
@@ -76,10 +77,16 @@ const Signup = () => {
           </div>
           <div className="w-full max-w-md">
             <form onSubmit={handleSignUp}>
-              <h1 className="text-[40px] font-semibold text-slate-900">
+              <h1
+                className="text-[40px] font-semibold text-slate-900"
+                style={{ fontFamily: "Helvetica" }}
+              >
                 Sign up
               </h1>
-              <p className="mt-1 text-[16px] text-gray-500">
+              <p
+                className="mt-1 text-[16px] text-gray-500"
+                style={{ fontFamily: "Sora" }}
+              >
                 Let's get you all set up so you can access your personal
                 account.
               </p>
@@ -92,7 +99,10 @@ const Signup = () => {
 
               <div className="mt-5 grid grid-cols-2 gap-3">
                 <div>
-                  <label className="mb-1 block text-[14px] text-gray-600">
+                  <label
+                    className="mb-1 block text-[14px] text-gray-600"
+                    style={{ fontFamily: "Helvetica" }}
+                  >
                     First Name
                   </label>
                   <input
@@ -101,10 +111,14 @@ const Signup = () => {
                     onChange={(e) => setFirstName(e.target.value)}
                     placeholder="First Name"
                     className="h-9.75 w-full rounded-sm border border-black px-2 text-[16px] outline-none focus:border-indigo-500"
+                    style={{ fontFamily: "Sora" }}
                   />
                 </div>
                 <div>
-                  <label className="mb-1 block text-[14px] text-gray-600">
+                  <label
+                    className="mb-1 block text-[14px] text-gray-600"
+                    style={{ fontFamily: "Helvetica" }}
+                  >
                     Last Name
                   </label>
                   <input
@@ -113,13 +127,17 @@ const Signup = () => {
                     onChange={(e) => setLastName(e.target.value)}
                     placeholder="Last Name"
                     className="h-9.75 w-full rounded-sm border border-black px-2 text-[16px] outline-none focus:border-indigo-500"
+                    style={{ fontFamily: "Sora" }}
                   />
                 </div>
               </div>
 
               <div className="mt-2 grid grid-cols-2 gap-2">
                 <div>
-                  <label className="mb-1 block text-[14px] text-gray-600">
+                  <label
+                    className="mb-1 block text-[14px] text-gray-600"
+                    style={{ fontFamily: "Helvetica" }}
+                  >
                     Email
                   </label>
                   <input
@@ -128,23 +146,31 @@ const Signup = () => {
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="example@gmail.com"
                     className="h-9.75 w-full rounded-sm border border-black px-2 text-[16px] outline-none focus:border-indigo-500"
+                    style={{ fontFamily: "Sora" }}
                   />
                 </div>
 
                 <div>
-                  <label className="mb-1 block text-[14px] text-gray-600">
+                  <label
+                    className="mb-1 block text-[14px] text-gray-600"
+                    style={{ fontFamily: "Helvetica" }}
+                  >
                     Phone Number
                   </label>
                   <input
                     type="tel"
                     placeholder="+92 3000000000"
                     className="h-9.75 w-full rounded-sm border border-black px-2 text-[16px] outline-none focus:border-indigo-500"
+                    style={{ fontFamily: "Sora" }}
                   />
                 </div>
               </div>
 
               <div className="mt-2">
-                <label className="mb-1 block text-[14px] text-gray-600">
+                <label
+                  className="mb-1 block text-[14px] text-gray-600"
+                  style={{ fontFamily: "Helvetica" }}
+                >
                   Password
                 </label>
                 <input
@@ -153,11 +179,15 @@ const Signup = () => {
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
                   className="h-9.75 w-full rounded-sm border border-black px-2 text-[16px] outline-none focus:border-indigo-500"
+                  style={{ fontFamily: "Helvetica" }}
                 />
               </div>
 
               <div className="mt-2">
-                <label className="mb-1 block text-[14px] text-gray-600">
+                <label
+                  className="mb-1 block text-[14px] text-gray-600"
+                  style={{ fontFamily: "Helvetica" }}
+                >
                   Confirm Password
                 </label>
                 <input
@@ -166,6 +196,7 @@ const Signup = () => {
                   onChange={(e) => setConfirmPassword(e.target.value)}
                   placeholder="••••••••"
                   className="h-9.75 w-full rounded-sm border border-black px-2 text-[16px] outline-none focus:border-indigo-500"
+                  style={{ fontFamily: "Sora" }}
                 />
               </div>
 
@@ -176,7 +207,10 @@ const Signup = () => {
                   onChange={(e) => setPrivacy(e.target.checked)}
                   className="h-4.5 w-4.5 accent-indigo-500"
                 />
-                <p className="text-[14px] text-gray-600">
+                <p
+                  className="text-[14px] text-gray-600"
+                  style={{ fontFamily: "Sora" }}
+                >
                   I agree to all the{" "}
                   <span className="text-[#FF8682]">Terms</span> and{" "}
                   <span className="text-[#FF8682]">Privacy Policies</span>
@@ -186,13 +220,17 @@ const Signup = () => {
               <button
                 type="submit"
                 className="mt-4 h-8 w-full rounded-sm bg-indigo-500 text-[14px] font-medium text-white transition hover:bg-indigo-600"
+                style={{ fontFamily: "Sora" }}
               >
                 Create account
               </button>
 
               <div className="my-4 flex items-center gap-2">
                 <div className="h-px flex-1 bg-gray-200" />
-                <span className="text-[14px] text-gray-400">
+                <span
+                  className="text-[14px] text-gray-400"
+                  style={{ fontFamily: "Helvetica" }}
+                >
                   Or Sign up with
                 </span>
                 <div className="h-px flex-1 bg-gray-200" />
