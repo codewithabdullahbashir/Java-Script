@@ -245,7 +245,9 @@ const Signup = () => {
                   style={{ fontFamily: "Sora" }}
                 >
                   Already have an account?{" "}
-                  <span className="text-[#FF8682] text-[14px]">Login</span>
+                  <span className="text-[#FF8682] text-[14px]">
+                    <a href="/login">Login</a>
+                  </span>
                 </p>
               </div>
 
