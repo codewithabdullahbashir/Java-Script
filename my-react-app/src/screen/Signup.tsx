@@ -85,13 +85,13 @@ const Signup = () => {
           <div className=" mt-10 w-full ">
             <form onSubmit={handleSignUp}>
               <h1
-                className="text-[40px] font-[600] text-[#313131]"
+                className="text-[40px] font-semibold text-[#313131]"
                 style={{ fontFamily: "Helvetica" }}
               >
                 Sign up
               </h1>
               <p
-                className="mt-6.5 text-[16px] font-[400] text-[#313131]"
+                className="mt-6.5 text-[16px] font-normal text-[#313131]"
                 style={{ fontFamily: "Sora" }}
               >
                 Let's get you all set up so you can access your personal
@@ -169,7 +169,7 @@ const Signup = () => {
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-[20px] text-[#313131] hover:text-[#313131]"
+                  className="absolute right-3 top-5.5 text-[#313131] hover:text-[#313131]"
                 >
                   {showPassword ? (
                     <LucideEye size={15} />
@@ -194,7 +194,7 @@ const Signup = () => {
                 <button
                   type="button"
                   onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                  className="absolute right-3 top-[20px] text-[#313131] hover:text-[#313131]"
+                  className="absolute right-3 top-5 text-[#313131] hover:text-[#313131]"
                 >
                   {showConfirmPassword ? (
                     <Eye size={15} />
@@ -209,10 +209,10 @@ const Signup = () => {
                   type="checkbox"
                   checked={privacy}
                   onChange={(e) => setPrivacy(e.target.checked)}
-                  className="h-[24px] w-[24px] font-[500]  border-8 rounded-xs border-[#313131] "
+                  className="h-6 w-6 font-medium  border-8 rounded-xs border-[#313131] "
                 />
                 <p
-                  className="text-[14px] text-[#313131] font-[500]"
+                  className="text-[14px] text-[#313131] font-medium"
                   style={{ fontFamily: "Sora" }}
                 >
                   I agree to all the{" "}
@@ -234,14 +234,14 @@ const Signup = () => {
 
               <button
                 type="submit"
-                className="mt-13 h-[48px] w-full rounded-[4px] bg-[#515DEF] text-[14px] font-medium text-white"
+                className="mt-13 h-12 w-full rounded-sm bg-[#515DEF] text-[14px] font-medium text-white"
                 style={{ fontFamily: "Sora" }}
               >
                 Create account
               </button>
-              <div className="h-[10px] w-full justify-center text-center mt-5">
+              <div className="h-2.5 w-full justify-center text-center mt-5">
                 <p
-                  className="text-[14px] text-[#313131] font-[500]"
+                  className="text-[14px] text-[#313131] font-medium"
                   style={{ fontFamily: "Sora" }}
                 >
                   Already have an account?{" "}
@@ -252,7 +252,7 @@ const Signup = () => {
               <div className="mt-15 flex items-center gap-2">
                 <div className="h-[0.5px] flex-1 bg-[#313131]" />
                 <span
-                  className="text-[14px] font-[400] text-[#313131]"
+                  className="text-[14px] font-normal text-[#313131]"
                   style={{ fontFamily: "Helvetica" }}
                 >
                   Or Sign up with
@@ -263,19 +263,19 @@ const Signup = () => {
               <div className="grid grid-cols-3 gap-2 mt-13">
                 <button
                   type="button"
-                  className="flex h-[56px] items-center justify-center rounded-[4px] border border-[#515DEF]"
+                  className="flex h-14 items-center justify-center rounded-sm border border-[#515DEF]"
                 >
                   <img src={Facebook} alt="Facebook" />
                 </button>
                 <button
                   type="button"
-                  className="flex h-[56px] items-center justify-center rounded-[4px] border border-[#515DEF]"
+                  className="flex h-14 items-center justify-center rounded-sm border border-[#515DEF]"
                 >
                   <img src={Google} alt="Google" />
                 </button>
                 <button
                   type="button"
-                  className="flex h-[56px] items-center justify-center rounded-[4px] border border-[#515DEF]"
+                  className="flex h-14 items-center justify-center rounded-sm border border-[#515DEF]"
                 >
                   <img src={Apple} alt="Apple" />
                 </button>
