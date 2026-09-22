@@ -12,9 +12,11 @@ const DashBoard = () => {
 
   return (
     <div>
-      <h1>Dashboard</h1>
+      <h1 className="text-white">Dashboard</h1>
 
-      <button onClick={handleLogout}>Sign Out</button>
+      <button className="text-white" onClick={handleLogout}>
+        Sign Out
+      </button>
     </div>
   );
 };
