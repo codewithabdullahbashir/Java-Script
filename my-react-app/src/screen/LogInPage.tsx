@@ -35,6 +35,15 @@ const LogInPage = () => {
               className="w-102 h-13.75 border rounded-md px-3 py-2"
             />
           </div>
+          <div className="mt-3.5 h-[24px] w-[502px]">
+            <p className="underline underline-offset-5 text-[#1C4532] text-[16px] font-medium">
+              Forgot Password?
+            </p>
+          </div>
+          <button className="h-13.25 w-102  mt-20 bg-[#1C4532] border rounded-[20px]">
+            Sign in
+          </button>
+          
         </form>
       </section>
       <section className="h-full w-full bg-[#1C4532]"></section>
