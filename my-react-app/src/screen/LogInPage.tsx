@@ -1,7 +1,9 @@
 const LogInPage = () => {
   return (
-    <div className="columns-2">
-      <section className="h-full w-full bg-white"></section>
+    <div className="grid grid-cols-2 h-screen w-full">
+      <section className="h-full w-full bg-white">
+        <div></div>
+      </section>
       <section className="h-full w-full bg-green-800"></section>
     </div>
   );
