@@ -23,7 +23,6 @@ const App = () => {
           <Route path="/login" element={<LogInPage />} />
         </Route>
 
-        {/* Dashboard only when logged in */}
         <Route element={<ProtectedRoute />}>
           <Route path="/dashboard" element={<DashBoard />} />
         </Route>
