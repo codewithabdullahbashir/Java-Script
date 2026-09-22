@@ -43,7 +43,16 @@ const LogInPage = () => {
           <button className="h-13.25 w-102  mt-20 bg-[#1C4532] border rounded-[20px]">
             Sign in
           </button>
-          
+          <div className="mt-15 flex items-center gap-2">
+            <div className="h-[0.5px] flex-1 bg-[#313131]" />
+            <span
+              className="text-[14px] font-normal text-[#313131]"
+              style={{ fontFamily: "Helvetica" }}
+            >
+              Or
+            </span>
+            <div className="h-[0.5px] flex-1 bg-[#313131]" />
+          </div>
         </form>
       </section>
       <section className="h-full w-full bg-[#1C4532]"></section>
