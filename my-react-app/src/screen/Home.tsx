@@ -16,6 +16,7 @@ import S2 from "../assets/S2.png";
 import Vector3 from "../assets/Vector3.png";
 import Vector2 from "../assets/Vector 2.png";
 import Vector1 from "../assets/Vector1.png";
+import { Link } from "lucide-react";
 
 const Home = () => {
   return (
@@ -35,13 +36,12 @@ const Home = () => {
             <a href="#" className="font-bold">
               Home
             </a>
-
-            <a href="#" className="font-bold">
+            <a href="/signup" className="font-bold">
               About
             </a>
 
-            <a href="#" className="font-bold">
-              Lab
+            <a href="/signup" className="font-bold">
+              SignUp
             </a>
           </div>
         </div>
@@ -324,7 +324,7 @@ const Home = () => {
           <h1 className="text-2xl font-bold">Contact</h1>
 
           <p
-            className="mx-auto mt-20 max-w-xl text-sm leading-6 text-gray-300 sm:mx-0"
+            className="mx-auto mt-20 max-w-xl text-sm leading-6 text-[#FFFFFF] sm:mx-0"
             style={{ fontFamily: "Sora" }}
           >
             I'm currently looking to join a cross-functional team that values
@@ -334,7 +334,7 @@ const Home = () => {
 
           <a
             href="mailto:ibrhaimmemon930@gmail.com"
-            className="mt-6 inline-block text-sm text-gray-200"
+            className="mt-6 inline-block text-sm text-[#FFFFFF]"
             style={{ fontFamily: "Sora" }}
           >
             ibrhaimmemon930@gmail.com
