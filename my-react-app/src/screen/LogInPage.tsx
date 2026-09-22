@@ -127,6 +127,11 @@ const LogInPage = () => {
       </section>
 
       <section className="text-center justify-center h-full w-full bg-[#1C4532]">
+        <div className="flex text-center justify-center gap-2 ">
+          <img src={Support} alt="Support" />
+
+          <p className="text-[#F7FAFC] text-[20px] font-medium">Support</p>
+        </div>
         
       </section>
     </div>
