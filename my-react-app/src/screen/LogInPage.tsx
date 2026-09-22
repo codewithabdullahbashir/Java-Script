@@ -1,61 +1,134 @@
 import LoginLogo from "../assets/LoginLogo.png";
+import EyeOn from "../assets/EyeOn.png";
+import EyeOff from "../assets/EyeOff.png";
+import Support from "../assets/Support.png";
+import { useState } from "react";
 
 const LogInPage = () => {
+
+  const [showPassword, setShowPassword] = useState(false)
   return (
-    <div className="grid grid-cols-2 h-screen w-full">
-      <section className="h-full w-full bg-white">
-        <form>
-          <div className="flex text-center  ">
-            <img src={LoginLogo} alt="Login Logo" className="h-8 w-31" />
-          </div>
+    <div className="grid min-h-screen grid-cols-2 ">
+      <section className="flex flex-col justify-center px-6 py-12 sm:px-12 md:px-20 bg-white">
+        <div className="mb-4">
+          <img src={LoginLogo} alt="Login Logo" className="h-8 w-auto" />
+        </div>
+
+        <div className="max-w-md w-full mt-14 mx-auto space-y-6">
           <div>
-            <h1 className="text-[48px] text-[#171923] font-bold">Sign In</h1>
-            <p className="text-[18px] text-[#718096] ">
-              Don't have an account ?{" "}
-              <span className="text-[#1C4532] underline">Create Now</span>
+            <h1 className="text-4xl font-bold text-[#171923]">Sign In</h1>
+            <p className="mt-10 text-sm text-[#718096]">
+              Don't have an account?{" "}
+              <a
+                href="#signup"
+                className="text-[#1C4532] underline font-medium"
+              >
+                Create Now
+              </a>
             </p>
           </div>
-          <div className="w-full flex flex-col gap-1">
-            <label htmlFor="email">E-mail</label>
-            <input
-              id="email"
-              type="email"
-              placeholder="example@gmail.com"
-              className="w-102 h-13.75 border rounded-md px-3 py-2"
-            />
-          </div>
-          <div className="w-full flex flex-col gap-1">
-            <label htmlFor="password" className="text-[#718096] text-[16px]">
-              E-mail
-            </label>
-            <input
-              id="password"
-              type="password"
-              placeholder="@#*%%!&"
-              className="w-102 h-13.75 border rounded-md px-3 py-2"
-            />
-          </div>
-          <div className="mt-3.5 h-[24px] w-[502px]">
-            <p className="underline underline-offset-5 text-[#1C4532] text-[16px] font-medium">
-              Forgot Password?
-            </p>
-          </div>
-          <button className="h-13.25 w-102  mt-20 bg-[#1C4532] border rounded-[20px]">
-            Sign in
-          </button>
-          <div className="mt-15 flex items-center gap-2">
-            <div className="h-[0.5px] flex-1 bg-[#313131]" />
-            <span
-              className="text-[14px] font-normal text-[#313131]"
-              style={{ fontFamily: "Helvetica" }}
+
+          <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+            <div className="flex flex-col gap-4">
+              <label
+                htmlFor="email"
+                className="text-sm font-medium text-[#171923]"
+                style={{ fontFamily: "Helvetica" }}
+              >
+                E-mail
+              </label>
+              <input
+                id="email"
+                type="email"
+                placeholder="example@gmail.com"
+                className="w-full h-12 px-4 border border-[#CBD5E0] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1C4532]"
+                style={{ fontFamily: "Sora" }}
+              />
+            </div>
+
+            <div className="flex flex-col gap-4 mt-5">
+              <label
+                htmlFor="password"
+                className="text-sm font-medium text-[#718096]"
+                style={{ fontFamily: "Helvetica" }}
+              >
+                Password
+              </label>
+              <div className="relative w-full">
+                <input
+                  id="password"
+                  type={showPassword ? "text" : "password"}
+                  placeholder="••••••••"
+                  className="w-full h-12 pl-4 pr-14 border border-[#CBD5E0] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1C4532]"
+                  style={{ fontFamily: "Sora" }}
+                />
+                <button
+                  onClick={() => setShowPassword((prev) => !prev)} // Changed from onChange
+                  type="button"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 p-1 focus:outline-none flex items-center justify-center"
+                  aria-label={showPassword ? "Hide password" : "Show password"}
+                >
+                  {showPassword ? (
+                    <img
+                      src={EyeOff}
+                      alt="Hide Password"
+                      className="w-5 h-5 opacity-70 hover:opacity-100 transition-opacity"
+                    />
+                  ) : (
+                    <img
+                      src={EyeOn}
+                      alt="Show Password"
+                      className="w-5 h-5 opacity-70 hover:opacity-100 transition-opacity"
+                    />
+                  )}
+                </button>
+              </div>
+            </div>
+
+            <div className="text-start">
+              <a
+                href="#forgot"
+                className="text-sm font-medium text-[#1C4532] underline underline-offset-3"
+                style={{ fontFamily: "Sora" }}
+              >
+                Forgot Password?
+              </a>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full h-12 mt-4 bg-[#1C4532] text-white font-semibold rounded-2xl hover:bg-[#143325] transition-colors"
             >
-              Or
-            </span>
-            <div className="h-[0.5px] flex-1 bg-[#313131]" />
-          </div>
-        </form>
+              Sign in
+            </button>
+
+            <div className="my-6 flex items-center gap-3">
+              <div className="h-px flex-1 bg-[#CBD5E0]" />
+              <span className="text-xs text-[#313131]">Or</span>
+              <div className="h-px flex-1 bg-[#CBD5E0]" />
+            </div>
+
+            <div className="space-y-3">
+              <button
+                type="button"
+                className="w-full h-12 flex items-center justify-center border border-[#CBD5E0] rounded-2xl text-[#67728A] font-medium hover:bg-gray-50 transition-colors"
+              >
+                Continue with Google
+              </button>
+              <button
+                type="button"
+                className="w-full h-12 flex items-center justify-center border border-[#CBD5E0] rounded-2xl text-[#67728A] font-medium hover:bg-gray-50 transition-colors"
+              >
+                Continue with Facebook
+              </button>
+            </div>
+          </form>
+        </div>
       </section>
-      <section className="h-full w-full bg-[#1C4532]"></section>
+
+      <section className="text-center justify-center h-full w-full bg-[#1C4532]">
+        
+      </section>
     </div>
   );
 };
