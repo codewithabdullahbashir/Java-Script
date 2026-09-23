@@ -151,7 +151,7 @@ const handleLogin = async (e: React.FormEvent) => {
             <button
               type="submit"
               disabled={loading}
-              className="mt-17 h-14 w-full rounded-[20px] bg-[#1C4532] text-[20px] font-medium text-[#F7FAFC]"
+              className="mt-17 h-14 w-full rounded-[20px] bg-[#1C4532] text-[20px] font-medium text-[#F7FAFC] cursor-pointer"
             >
               {loading ? "Signing in..." : "Sign in"}
             </button>

@@ -66,6 +66,8 @@ const Signup = () => {
       setError(
         err?.message || "Something went wrong while creating your account.",
       );
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -171,7 +173,7 @@ const Signup = () => {
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-5.5 text-[#313131] hover:text-[#313131]"
+                  className="absolute right-3 top-5.5 text-[#313131] hover:text-[#313131] cursor-cl"
                 >
                   {showPassword ? (
                     <LucideEye size={15} />
@@ -236,11 +238,10 @@ const Signup = () => {
 
               <button
                 type="submit"
-                className="mt-13 h-12 w-full rounded-sm bg-[#515DEF] text-[14px] font-medium text-white"
+                className="mt-13 h-12 w-full rounded-sm bg-[#515DEF] hover:focus:border-l-amber-400 text-[14px] font-medium text-white cursor-pointer"
                 style={{ fontFamily: "Sora" }}
               >
                 {loading ? "Createing Account..." : "Create Account"}
-                Create account
               </button>
               <div className="h-2.5 w-full justify-center text-center mt-5">
                 <p
