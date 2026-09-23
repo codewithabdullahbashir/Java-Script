@@ -2,9 +2,9 @@ import LoginLogo from "../assets/LoginLogo.png";
 import OpenEye from "../assets/OpenEye.png";
 import EyeOff from "../assets/EyeOff.png";
 import LoginEllipse from "../assets/LoginEllipse.png";
-
 import Small_Earnings from "../assets/Small_Earnings.png";
 import Facebook from "../assets/Facebook.png";
+import Skip from "../assets/Skip.png";
 import Googel from "../assets/Google.png";
 import Support from "../assets/Support.png";
 import Illustration from "../assets/Illustration.png";
@@ -14,37 +14,31 @@ const LogInPage = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="grid min-h-screen grid-cols-2 bg-white">
+    <div className="min-h-screen bg-white lg:grid lg:grid-cols-2">
       <section className="relative flex min-h-screen flex-col bg-white px-3.75 py-8.5">
         <div className="mx-auto mt-7.75 w-full max-w-90.5">
-          <div>
-            <img
-              src={LoginLogo}
-              alt="Login Logo"
-              className="mb-20  h-8 w-32 text-center justify-center"
-            />
-          </div>
-          <div>
-            <h1
-              className="text-[48px] font-bold leading-[100%] text-[#171923]"
-              style={{ fontFamily: "Helvetica" }}
-            >
-              Sign In
-            </h1>
+          <img src={LoginLogo} alt="Login Logo" className="mb-20 h-8 w-32" />
 
-            <p
-              className="mt-9 text-[18px] leading-[150%] text-[#718096]"
-              style={{ fontFamily: "Helvetica" }}
+          <h1
+            className="text-[48px] font-bold leading-[100%] text-[#171923]"
+            style={{ fontFamily: "Helvetica" }}
+          >
+            Sign In
+          </h1>
+
+          <p
+            className="mt-9 text-[18px] leading-[150%] text-[#718096]"
+            style={{ fontFamily: "Sora" }}
+          >
+            Don't have an account?{" "}
+            <a
+              href="#signup"
+              className="font-medium text-[#1C4532] underline"
+              style={{ fontFamily: "Sora" }}
             >
-              Don't have an account?{" "}
-              <a
-                href="#signup"
-                className="font-medium text-[#1C4532] underline"
-              >
-                Create now
-              </a>
-            </p>
-          </div>
+              Create now
+            </a>
+          </p>
 
           <form className="mt-6">
             <div>
@@ -60,7 +54,7 @@ const LogInPage = () => {
                 id="email"
                 type="email"
                 placeholder="example@gmail.com"
-                className="w-full h-14 rounded-xl pl-2.5 pr-6.25 border bg-[#F7FAFC] border-[#CBD5E0] text-[#4A5568] text-[16px] outline-none focus:ring-1 focus:ring-[#CBD5E0]"
+                className="h-14 w-full rounded-xl border border-[#CBD5E0] bg-[#F7FAFC] pl-2.5 pr-6.25 text-[16px] text-[#4A5568] outline-none focus:ring-1 focus:ring-[#CBD5E0]"
                 style={{ fontFamily: "Sora" }}
               />
             </div>
@@ -79,7 +73,7 @@ const LogInPage = () => {
                   id="password"
                   type={showPassword ? "text" : "password"}
                   placeholder="#$%&@"
-                  className="w-full h-14  rounded-xl border border-[#CBD5E0] pl-2.5 pr-6.25 text-[#4A5568] text-[16px] outline-none focus:ring-1 focus:ring-[#1C4532]"
+                  className="h-14 w-full rounded-xl border border-[#CBD5E0] pl-2.5 pr-6.25 text-[16px] text-[#4A5568] outline-none focus:ring-1 focus:ring-[#1C4532]"
                   style={{ fontFamily: "Sora" }}
                 />
 
@@ -110,7 +104,8 @@ const LogInPage = () => {
 
             <button
               type="submit"
-              className="mt-17 h-14 w-full rounded-[7px] bg-[#1C4532] text-[20px] text-[#F7FAFC] font-medium  transition-colors hover:bg-[#143325]"
+              className="mt-17 h-14 w-full rounded-[20px] bg-[#1C4532] text-[20px] font-medium text-[#F7FAFC] transition-colors hover:bg-[#143325]"
+              style={{ fontFamily: "Sora" }}
             >
               Sign in
             </button>
@@ -123,69 +118,107 @@ const LogInPage = () => {
               <div className="h-px flex-1 bg-[#CBD5E0]" />
             </div>
 
-            <div>
-              <button
-                type="button"
-                className="relative flex h-15 w-full items-center justify-center rounded-[20px] border border-[#CBD5E0] text-[18px] font-medium text-[#67728A] transition-colors hover:bg-gray-50"
-              >
-                <img src={Googel} alt="" className="absolute left-3 h-8 w-8" />
-                Continue with Google
-              </button>
+            <button
+              type="button"
+              className="relative flex h-15 w-full items-center justify-center rounded-[20px] border border-[#CBD5E0] text-[18px] font-medium text-[#67728A] transition-colors hover:bg-gray-50"
+              style={{ fontFamily: "Sora" }}
+            >
+              <img src={Googel} alt="" className="absolute left-3 h-8 w-8" />
+              Continue with Google
+            </button>
 
-              <button
-                type="button"
-                className="relative mt-11 flex h-15 w-full items-center justify-center rounded-[20px] border border-[#CBD5E0] text-[18px] font-medium text-[#67728A] transition-colors hover:bg-gray-50"
-              >
-                <img
-                  src={Facebook}
-                  alt=""
-                  className="absolute left-3 h-8 w-8"
-                />
-                Continue with Facebook
-              </button>
-            </div>
+            <button
+              type="button"
+              className="relative mt-11 flex h-15 w-full items-center justify-center rounded-[20px] border border-[#CBD5E0] text-[18px] font-medium text-[#67728A] transition-colors hover:bg-gray-50"
+            >
+              <img
+                src={Facebook}
+                alt=""
+                className="absolute left-3 h-8 w-8"
+                style={{ fontFamily: "Sora" }}
+              />
+              Continue with Facebook
+            </button>
           </form>
         </div>
       </section>
-      {/* ---------------------------------------------------------------------------------------------------------------------- */}
-      <section className="relative min-h-screen overflow-hidden bg-[#1C4532]">
-        <div className="absolute left-28 top-20 flex gap-3.25">
-          <img src={Support} alt="Support" className="h-[22.5px] w-[25px]" />
 
-          <p className="text-[20px] font-medium text-[#F7FAFC]">Support</p>
+      <section className="relative hidden min-h-screen overflow-hidden bg-[#1C4532] lg:block">
+        <div className="absolute left-70.5 top-10 flex items-center gap-3.25">
+          <img src={Support} alt="Support" className="h-[22.5px] w-6.25" />
+
+          <p
+            className="text-[20px] font-medium text-[#F7FAFC]"
+            style={{ fontFamily: "Sora" }}
+          >
+            Support
+          </p>
         </div>
 
-        <div className="absolute left-70 top-70 -translate-x-1/2">
-          <div className="relative h-[433.66px] w-[456.74px]">
+        <div className="absolute left-1/2 top-40 -translate-x-1/2">
+          <div className="relative h-107.5 w-162.5">
             <img
               src={LoginEllipse}
-              alt="BG"
-              className="absolute left-15 top-45 h-[433.66px] w-[466.4px]"
+              alt="Background"
+              className="absolute left-25 top-17.5 h-[433.66px] w-[466.4px]"
             />
 
-            <div className="absolute ml-17 left-1.25  top-37 h-85 w-[470px] rounded-sm bg-[#F7FAFC] p-4">
-              <h2 className=" mt-10 w-62.5  text-[34px] font-bold leading-[37px] text-[#1C4532]">
+            <div className="absolute left-30 top-13.75 h-85 w-117.5 rounded-sm bg-[#F7FAFC] p-4">
+              <h2
+                className="mt-10 w-62.5 text-[34px] font-bold leading-9.25 text-[#1C4532]"
+                style={{ fontFamily: "Helvetica" }}
+              >
                 Reach financial
                 <br />
                 goals faster
               </h2>
-              <p className="mt-5 w-[250px]  text-[16px] leading-[28px] text-[#718096]">
+
+              <p className="mt-5 w-62.5 text-[16px] leading-7 text-[#718096]">
                 Use your Venus card around the world with no hidden fees. Hold,
                 transfer and spend money.
               </p>
-              <button className="mt-6.5 rounded-[70px] bg-[#1C4532] h-11.5 w-40 px-[13px] py-[5px] text-[14px] text-[#F7FAFC]">
+
+              <button
+                className="mt-6.5 h-11.5 w-40 rounded-[70px] bg-[#1C4532] px-3.25 py-1.25 text-[14px] text-[#F7FAFC]"
+                style={{ fontFamily: "Sora" }}
+              >
                 Learn more
               </button>
-              <div className="relative -top-80 left-58.5">
-                <img src={Illustration} alt="" />
-              </div>
-              
-              <div className="relative -top-80 left-42">
-                <img src={Small_Earnings} alt="" />
-              </div>
+
+              <img
+                src={Illustration}
+                alt=""
+                className="absolute -right-0.5 top-3.75"
+              />
+
+              <img
+                src={Small_Earnings}
+                alt=""
+                className="absolute -right-px top-77.5 h-18"
+              />
             </div>
           </div>
-          
+
+          <div className="mt-10 ml-30 w-117.5 text-center">
+            <h1
+              className="text-[40px] text-[#F7FAFC]"
+              style={{ fontFamily: "Helvetica" }}
+            >
+              Introducing new features
+            </h1>
+
+            <p
+              className="mt-10 text-[20px] leading-7.5 text-[#CFD9E0]"
+              style={{ fontFamily: "Sora" }}
+            >
+              Analyzing previous trends ensures that businesses always make the
+              right decision. And as the scale of the decision and it's impact
+              magnifies...
+            </p>
+          </div>
+          <div className="absolute left-29.5 top-185">
+            <img src={Skip} alt="Skip" className="h-7.5 w-auto" />
+          </div>
         </div>
       </section>
     </div>
