@@ -9,9 +9,45 @@ import Googel from "../assets/Google.png";
 import Support from "../assets/Support.png";
 import Illustration from "../assets/Illustration.png";
 import { useState } from "react";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth} from "../config/Firebase";
+import { useNavigate } from "react-router-dom";
 
 const LogInPage = () => {
-  const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
+const [showPassword, setShowPassword] = useState(false);
+const [email, setEmail] = useState("");
+const [password, setPassword] = useState("");
+const [error, setError] = useState("");
+const [loading, setLoading] = useState(false);
+
+const handleLogin = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setError("");
+
+  if (!email) {
+    setError("Enter Your E-Mail");
+    return;
+  }
+
+  if (!password) {
+    setError("Enter Your Password");
+    return;
+  }
+
+  try {
+    setLoading(true);
+
+    await signInWithEmailAndPassword(auth, email, password);
+
+    navigate("/dashboard")
+  } catch (e) {
+    setError("Invalid E-Mail or Password");
+  } finally {
+    setLoading(false);
+  }
+};
+;
 
   return (
     <div className="min-h-screen bg-white lg:grid lg:grid-cols-2">
@@ -26,13 +62,19 @@ const LogInPage = () => {
             Sign In
           </h1>
 
+          {error && (
+            <div className="mt-3 rounded border border-red-400 bg-red-100 px-3 py-2 text-sm text-red-700">
+              {error}
+            </div>
+          )}
+
           <p
             className="mt-9 text-[18px] leading-[150%] text-[#718096]"
             style={{ fontFamily: "Sora" }}
           >
             Don't have an account?{" "}
             <a
-              href="#signup"
+              href="/signup"
               className="font-medium text-[#1C4532] underline"
               style={{ fontFamily: "Sora" }}
             >
@@ -40,7 +82,7 @@ const LogInPage = () => {
             </a>
           </p>
 
-          <form className="mt-6">
+          <form className="mt-6" onSubmit={handleLogin}>
             <div>
               <label
                 htmlFor="email"
@@ -53,6 +95,8 @@ const LogInPage = () => {
               <input
                 id="email"
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="example@gmail.com"
                 className="h-14 w-full rounded-xl border border-[#CBD5E0] bg-[#F7FAFC] pl-2.5 pr-6.25 text-[16px] text-[#4A5568] outline-none focus:ring-1 focus:ring-[#CBD5E0]"
                 style={{ fontFamily: "Sora" }}
@@ -71,6 +115,8 @@ const LogInPage = () => {
               <div className="relative w-full">
                 <input
                   id="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   type={showPassword ? "text" : "password"}
                   placeholder="#$%&@"
                   className="h-14 w-full rounded-xl border border-[#CBD5E0] pl-2.5 pr-6.25 text-[16px] text-[#4A5568] outline-none focus:ring-1 focus:ring-[#1C4532]"
@@ -104,10 +150,10 @@ const LogInPage = () => {
 
             <button
               type="submit"
-              className="mt-17 h-14 w-full rounded-[20px] bg-[#1C4532] text-[20px] font-medium text-[#F7FAFC] transition-colors hover:bg-[#143325]"
-              style={{ fontFamily: "Sora" }}
+              disabled={loading}
+              className="mt-17 h-14 w-full rounded-[20px] bg-[#1C4532] text-[20px] font-medium text-[#F7FAFC]"
             >
-              Sign in
+              {loading ? "Signing in..." : "Sign in"}
             </button>
 
             <div className="my-14 flex items-center gap-4">
@@ -226,3 +272,6 @@ const LogInPage = () => {
 };
 
 export default LogInPage;
+
+
+

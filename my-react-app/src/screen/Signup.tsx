@@ -24,6 +24,7 @@ const Signup = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [privacy, setPrivacy] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const handleSignUp = async (e: React.FormEvent) => {
@@ -46,6 +47,7 @@ const Signup = () => {
     }
 
     try {
+      setLoading(true);
       const result = await createUserWithEmailAndPassword(
         auth,
         email,
@@ -237,6 +239,7 @@ const Signup = () => {
                 className="mt-13 h-12 w-full rounded-sm bg-[#515DEF] text-[14px] font-medium text-white"
                 style={{ fontFamily: "Sora" }}
               >
+                {loading ? "Createing Account..." : "Create Account"}
                 Create account
               </button>
               <div className="h-2.5 w-full justify-center text-center mt-5">
