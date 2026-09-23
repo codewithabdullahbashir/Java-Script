@@ -1,176 +1,13 @@
-/* import LoginLogo from "../assets/LoginLogo.png";
-import EyeOn from "../assets/EyeOn.png";
-import EyeOff from "../assets/EyeOff.png";
-import Skip from "../assets/Skip.png"
-import Facebook from "../assets/Facebook.png";
-import Googel from '../assets/Google.png'
-import Support from "../assets/Support.png";
-import { useState } from "react";
-
-const LogInPage = () => {
-  const [showPassword, setShowPassword] = useState(false);
-
-  return (
-    <div className="grid min-h-screen grid-cols-2 ">
-      <section className="flex flex-col justify-center px-6 py-12 sm:px-12 md:px-20 bg-white">
-        <div className="mb-4">
-          <img src={LoginLogo} alt="Login Logo" className="h-8 w-auto" />
-        </div>
-
-        <div className="max-w-md w-full mt-14 mx-auto space-y-6">
-          <div>
-            <h1 className="text-4xl font-bold text-[#171923]">Sign In</h1>
-            <p className="mt-10 text-sm text-[#718096]">
-              Don't have an account?{" "}
-              <a
-                href="#signup"
-                className="text-[#1C4532] underline font-medium"
-              >
-                Create now
-              </a>
-            </p>
-          </div>
-
-          <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-            <div className="flex flex-col gap-4">
-              <label
-                htmlFor="email"
-                className="text-[16px] font-medium text-[#718096]"
-                style={{ fontFamily: "Helvetica" }}
-              >
-                E-mail
-              </label>
-              <input
-                id="email"
-                type="email"
-                placeholder="example@gmail.com"
-                className="w-full h-12 px-4 border border-[#CBD5E0] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1C4532]"
-                style={{ fontFamily: "Sora" }}
-              />
-            </div>
-
-            <div className="flex flex-col gap-4 mt-5">
-              <label
-                htmlFor="password"
-                className="text-sm font-medium text-[#718096]"
-                style={{ fontFamily: "Helvetica" }}
-              >
-                Password
-              </label>
-              <div className="relative w-full">
-                <input
-                  id="password"
-                  type={showPassword ? "text" : "password"}
-                  placeholder="••••••••"
-                  className="w-full h-12 pl-4 pr-14 border border-[#CBD5E0] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1C4532]"
-                  style={{ fontFamily: "Sora" }}
-                />
-                <button
-                  onClick={() => setShowPassword((prev) => !prev)} // Changed from onChange
-                  type="button"
-                  className="absolute right-4 top-1/2 -translate-y-1/2 p-1 focus:outline-none flex items-center justify-center"
-                  aria-label={showPassword ? "Hide password" : "Show password"}
-                >
-                  {showPassword ? (
-                    <img
-                      src={EyeOff}
-                      alt="Hide Password"
-                      className="w-5 h-5 opacity-70 hover:opacity-100 transition-opacity"
-                    />
-                  ) : (
-                    <img
-                      src={EyeOn}
-                      alt="Show Password"
-                      className="w-5 h-5 opacity-70 hover:opacity-100 transition-opacity"
-                    />
-                  )}
-                </button>
-              </div>
-            </div>
-
-            <div className="text-start">
-              <a
-                href="#forgot"
-                className="text-sm font-medium text-[#1C4532] underline underline-offset-3"
-                style={{ fontFamily: "Sora" }}
-              >
-                Forgot Password?
-              </a>
-            </div>
-
-            <button
-              type="submit"
-              className="w-full h-12 mt-4 bg-[#1C4532] text-white font-semibold rounded-2xl hover:bg-[#143325] transition-colors cursor-pointer"
-            >
-              Sign in
-            </button>
-
-            <div className="my-7.5 flex items-center gap-3">
-              <div className="h-px flex-1 bg-[#CBD5E0]" />
-              <span className="text-xs text-[#313131]">Or</span>
-              <div className="h-px flex-1 bg-[#CBD5E0]" />
-            </div>
-
-            <div className="">
-              <button
-                type="button"
-                className="w-full h-12 flex items-center justify-center border border-[#CBD5E0] rounded-2xl text-[#67728A] font-medium hover:bg-gray-50 transition-colors"
-              >
-                <img src={Googel} alt="" className="relative -left-32" />
-                Continue with Google
-              </button>
-              <button
-                type="button"
-                className="w-full mt-10 h-12 flex items-center justify-center border border-[#CBD5E0] rounded-2xl text-[#67728A] font-medium hover:bg-gray-50 transition-colors"
-              >
-                <img src={Facebook} alt="" className="relative -left-30" />
-                Continue with Facebook
-              </button>
-            </div>
-          </form>
-        </div>
-      </section>
-
-      <section className="text-center justify-center h-full w-full bg-[#1C4532]">
-        <div className="flex text-center justify-center gap-2 ">
-          <img src={Support} alt="Support" />
-          <p className="text-[#F7FAFC] text-[20px] font-medium">Support</p>
-        </div>
-        <div className="h-131.25 w-154.5 text-center justify-center">
-          <div />
-          <div className="bg-white">
-            <h1>Reach Finacial goals faster</h1>
-            <p>
-              Use your Venus card around the world with no hidden fees. Hold,
-              transfer and spend money.
-            </p>
-            <button>Learn more</button>
-          </div>
-          <div className="">
-            <h3 className="text-white">Introducing new features</h3>
-            <p>
-              Analyzing previous trends ensures that businesses always make the
-              right decision. And as the scale of the decision and it’s impact
-              magnifies...
-            </p>
-          </div>
-        </div>
-        <img src={Skip} alt="Skip" />
-      </section>
-    </div>
-  );
-};
-
-export default LogInPage;
- */
-
 import LoginLogo from "../assets/LoginLogo.png";
 import OpenEye from "../assets/OpenEye.png";
 import EyeOff from "../assets/EyeOff.png";
+import LoginEllipse from "../assets/LoginEllipse.png";
+
 import Skip from "../assets/Skip.png";
 import Facebook from "../assets/Facebook.png";
 import Googel from "../assets/Google.png";
 import Support from "../assets/Support.png";
+import Illustration from "../assets/Illustration.png";
 import { useState } from "react";
 
 const LogInPage = () => {
@@ -310,15 +147,46 @@ const LogInPage = () => {
           </form>
         </div>
       </section>
-{/* ---------------------------------------------------------------------------------------------------------------------- */}
+      {/* ---------------------------------------------------------------------------------------------------------------------- */}
       <section className="relative min-h-screen overflow-hidden bg-[#1C4532]">
-        <div className="absolute left-28 top-20 flex  gap-3.25">
+        <div className="absolute left-28 top-20 flex gap-3.25">
           <img src={Support} alt="Support" className="h-[22.5px] w-[25px]" />
 
           <p className="text-[20px] font-medium text-[#F7FAFC]">Support</p>
         </div>
 
-        
+        <div className="absolute left-70 top-70 -translate-x-1/2">
+          <div className="relative h-[433.66px] w-[456.74px]">
+            <img
+              src={LoginEllipse}
+              alt="BG"
+              className="absolute left-15 top-45 h-[433.66px] w-[466.4px]"
+            />
+
+            <div className="absolute ml-17 left-1.25  top-37 h-85 w-[470px] rounded-sm bg-[#F7FAFC] p-4">
+              <h2 className=" mt-10 w-62.5  text-[34px] font-bold leading-[37px] text-[#1C4532]">
+                Reach financial
+                <br />
+                goals faster
+              </h2>
+
+              <p className="mt-5 w-[250px]  text-[16px] leading-[28px] text-[#718096]">
+                Use your Venus card around the world with no hidden fees. Hold,
+                transfer and spend money.
+              </p>
+
+              <button className="mt-6.5 rounded-[70px] bg-[#1C4532] h-11.5 w-40 px-[13px] py-[5px] text-[14px] text-[#F7FAFC]">
+                Learn more
+              </button>
+              <div className="relative -top-75 left-58.5">
+                <img src={Illustration} alt="" />
+              </div>
+            </div>
+          </div>
+
+          
+
+        </div>
       </section>
     </div>
   );
