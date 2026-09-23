@@ -3,7 +3,7 @@ import OpenEye from "../assets/OpenEye.png";
 import EyeOff from "../assets/EyeOff.png";
 import LoginEllipse from "../assets/LoginEllipse.png";
 
-import Skip from "../assets/Skip.png";
+import Small_Earnings from "../assets/Small_Earnings.png";
 import Facebook from "../assets/Facebook.png";
 import Googel from "../assets/Google.png";
 import Support from "../assets/Support.png";
@@ -169,23 +169,23 @@ const LogInPage = () => {
                 <br />
                 goals faster
               </h2>
-
               <p className="mt-5 w-[250px]  text-[16px] leading-[28px] text-[#718096]">
                 Use your Venus card around the world with no hidden fees. Hold,
                 transfer and spend money.
               </p>
-
               <button className="mt-6.5 rounded-[70px] bg-[#1C4532] h-11.5 w-40 px-[13px] py-[5px] text-[14px] text-[#F7FAFC]">
                 Learn more
               </button>
-              <div className="relative -top-75 left-58.5">
+              <div className="relative -top-80 left-58.5">
                 <img src={Illustration} alt="" />
+              </div>
+              
+              <div className="relative -top-80 left-42">
+                <img src={Small_Earnings} alt="" />
               </div>
             </div>
           </div>
-
           
-
         </div>
       </section>
     </div>
