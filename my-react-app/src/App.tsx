@@ -5,6 +5,7 @@ import { ProtectedRoute, PublicOnlyRoute } from "./routes/ProtuctedRoutes";
 import Home from "./screen/Home";
 import Signup from "./screen/Signup";
 import DashBoard from "./screen/DashBoard";
+import LogInPage from "./screen/LogInPage";
 
 const App = () => {
   return (
@@ -18,7 +19,10 @@ const App = () => {
           <Route path="/signup" element={<Signup />} />
         </Route>
 
-        {/* Dashboard only when logged in */}
+        <Route element={<PublicOnlyRoute />}>
+          <Route path="/login" element={<LogInPage />} />
+        </Route>
+
         <Route element={<ProtectedRoute />}>
           <Route path="/dashboard" element={<DashBoard />} />
         </Route>
